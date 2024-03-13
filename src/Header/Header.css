@@ -42,19 +42,28 @@
     font-family: "Arsenal", sans-serif;
     margin-left:auto ;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
+    width: auto;
 
 }
-#Header-Login-Signup button:first-child{
-    border: none;
-    background-color: inherit;
+#Header-Login-Signup #signup-btn{
+    font-family: "Arsenal", sans-serif;
+
+    text-decoration: none;
+    color: #000000;
     font-size: 1rem;
     
 
 }
-#Header-Login-Signup button:last-child{
+#Header-Login-Signup #Login-btn{
+    font-family: "Arsenal", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     border: 1px solid #317ef3;
     background-color: #317ef3;
     color: #ffffff;

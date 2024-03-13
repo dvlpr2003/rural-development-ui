@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import './Header.css'
 
 
@@ -15,8 +16,8 @@ export default function Header(){
                 <span>Security</span>
             </div>
             <div id='Header-Login-Signup'>
-                <button>Sign up</button>
-                <button>Login</button>
+                <NavLink to ="/" id='signup-btn'>Sign up</NavLink>
+                <NavLink to="/login" id='Login-btn'><span>Login</span></NavLink>
             </div>
 
         </div>
