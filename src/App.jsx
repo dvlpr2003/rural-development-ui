@@ -9,18 +9,17 @@ import SignUp from './components/Signup'
 function App() {
 
   return (
-    // <>
-    // <BrowserRouter>
-    // <Routes>
-    //   <Route path="/" element={<Header/>}/>
-    //   <Route path='/Login' element={<Login/>}/>
-    // </Routes>
-    // </BrowserRouter>
-    
-    // </>
     <>
-    <SignUp/>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Header/>}/>
+      <Route path='/Login' element={<Login/>}/>
+      <Route path='/signup' element={<SignUp/>}/>
+    </Routes>
+    </BrowserRouter>
+    
     </>
+ 
   )
 }
 

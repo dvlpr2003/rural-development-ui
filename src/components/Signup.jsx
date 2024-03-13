@@ -1,7 +1,9 @@
 import "./Signup.css"
-
+import Header from "../Header/Header"
 export default function SignUp(){
     return(
+        <>
+        <Header/>
         <div id="signup-container-main">
             <div id="signup-img-container" className="signup-container">
                 <img src="img/kid-signup.jpeg" alt="kid-img"/>
@@ -21,6 +23,7 @@ export default function SignUp(){
 
             </div>
         </div>
+        </>
     )
 }
 function First_Last_Name(){
