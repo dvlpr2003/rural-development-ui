@@ -5,6 +5,10 @@ function Login(){
         <>
         <Header/>
         <div id="login-container">
+        <div id="login-image-container">
+          <img src="img/kid_login.jpeg" alt="login-kid-img"/>
+
+        </div>
         <div id="login">
             <h2>Login</h2>
             <LoginElement/>

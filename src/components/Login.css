@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
 }
 #login h2 {
     margin-top: 1rem;
@@ -78,4 +79,14 @@ button {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+#login-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#login-image-container img{
+    height: 27rem;
+    border-radius: 10px;
 }
