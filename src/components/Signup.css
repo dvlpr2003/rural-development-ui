@@ -17,7 +17,7 @@ h2 {
     border: 1px solid #afafaf;
     border-radius: 20px;
     width: 35rem;
-    height: 35rem;
+    height: 39rem;
 }
 #signup-img-container{
     display: flex;
@@ -27,7 +27,7 @@ h2 {
     width: 20rem;
 }
 #signup-img-container img{
-    height: 35rem;
+    height: 39rem;
     border-radius:20px ;
     align-self: flex-end;
     margin-left: auto;

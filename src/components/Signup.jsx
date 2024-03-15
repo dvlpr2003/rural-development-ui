@@ -5,7 +5,6 @@ import axios from "axios"
 const delay = ms => new Promise(
     resolve => setTimeout(resolve, ms)
   );
-
 export default function SignUp(){
     const [Fname,setFname]=useState("")
     const [Lname,setLname]=useState("")
@@ -14,6 +13,7 @@ export default function SignUp(){
     const [AddressLine,setAddressLine]=useState("")
     const [DistrictLine,setDinstrictLine] = useState("")
     const [Postalcode,setPostalcode] = useState("")
+    const [Passcode,setPasscode]=useState("")
     const [Data,setData] = useState()
     const [isLoading,setisLoading]=useState(false)
     useEffect (function(){
@@ -21,15 +21,15 @@ export default function SignUp(){
             name:{
                 fname:Fname,
                 lname:Lname,
-            
             },
             mail:eMail,
+            password:Passcode,
             phone:Mobileno,
             address:AddressLine,
             district:DistrictLine,
             pincode:Postalcode
         }
-        if (Fname!="" && Lname!="" && eMail!="" && Mobileno!="" && AddressLine!="" && DistrictLine!="" && Postalcode != ""){
+        if (Fname!="" && Lname!="" && eMail!="" && Mobileno!="" && AddressLine!="" && DistrictLine!="" && Postalcode != "" && Passcode !=""){
             setData(all_data)
         }
 
@@ -59,6 +59,7 @@ export default function SignUp(){
 
                 <First_Last_Name setFname={setFname} setLname={setLname}/>
                 <Mail seteMail={seteMail}/>
+                <Password setPasscode={setPasscode}/>
                 <Phone setMobileno={setMobileno}/>
                 <Address setAddressLine={setAddressLine}/>
                 <District setDinstrictLine={setDinstrictLine}/>
@@ -68,7 +69,6 @@ export default function SignUp(){
                 isLoading ? <LoadingAnimation/> :""
                 }
                 </div>
-
             </div>
         </div>
         </>
@@ -86,6 +86,14 @@ function Mail({seteMail}){
     return(
         <>
         <input placeholder="Mail" onChange={(e)=>seteMail(e.target.value)}/>
+        </>
+    )
+}
+function Password({setPasscode}){
+    return(
+        <>
+        <input placeholder="Password" onChange={(e)=>setPasscode(e.target.value)}/>
+
         </>
     )
 }
@@ -125,8 +133,7 @@ function S_Btn({Finalize}){
     )
 }
 
-
-
+// Loading animation
 function LoadingAnimation(){
     return (
       <div className="loading-container">

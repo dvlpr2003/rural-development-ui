@@ -3,6 +3,8 @@
     height: 27rem;
     width: 30rem;
     display: flex;
+    position: relative;
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -11,7 +13,6 @@
 }
 #login-container{
     height: 45rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,3 +91,34 @@ button {
     height: 27rem;
     border-radius: 10px;
 }
+
+
+
+
+
+/* login animation  */
+
+
+.loading-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+      
+    }
+    
+    .loading-spinner {
+      border: 8px solid #0000001a;
+      border-left-color: #7983ff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
