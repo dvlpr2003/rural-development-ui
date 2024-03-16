@@ -1,0 +1,61 @@
+#heading-container{
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.H-containers{
+    width: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.heading-text-container{
+    width: 38rem;
+}
+#heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#heading h1{
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+#heading-para{
+    display: flex;
+    flex-direction: column ;
+    gap: 0.5rem;
+}
+#heading-para p{
+    font-family: "Cambay", sans-serif;
+    color: #8a8888;
+    font-size: 0.9rem;
+}
+#Heading-buttons{
+    width: 70vh;
+    height: 5rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 4rem;
+}
+.Btn-items {
+    border: 1px solid #317ef3;
+    background-color: #317ef3;
+    border-radius: 10px;
+    width: 7rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+}

@@ -12,8 +12,8 @@ export default function Header(){
             <div id='Header-Elements'>
                 <span>Service</span>
                 <span>Features</span>
-                <span>Pricing</span>
-                <span>Security</span>
+                <span>Development</span>
+                <span>Query</span>
             </div>
             <div id='Header-Login-Signup'>
                 <NavLink to ="/signup" id='signup-btn'>Sign up</NavLink>
