@@ -1,12 +1,11 @@
 import "./Login.css"
 import Header from "../Header/Header"
 import { useState } from "react";
-
 import axios from "axios"
+import { NavLink } from "react-router-dom";
 const delay = ms => new Promise(
   resolve => setTimeout(resolve, ms)
 );
-
 function Login(){
   const [Username,setUsername]=useState("")
   const [password,setPassword] = useState("")
@@ -15,7 +14,6 @@ function Login(){
   const [pEmpty,setpEmpty]=useState(false)
   const [EError,setEError]=useState(false)
   const [PError,setPError]=useState(false)
-
 
   async function LoginAction(){
     if (Username === "") return setuEmpty(true);
@@ -75,13 +73,11 @@ function LoginElement({LoginAction,setUsername,setPassword,uEmpty,pEmpty,EError,
             <p>Forgot Password?</p>
             <div id="login-xx-container">
             <button onClick={LoginAction}>Login</button>
-            <p>Not a member? Signup</p>
+            <p >Not a member? <NavLink to="/signup" style={{textDecoration:"none"}}>Signup</NavLink></p>
             </div>
         </div>
     )
 }
-
-
 // Loading animation
 function LoadingAnimation(){
     return (
