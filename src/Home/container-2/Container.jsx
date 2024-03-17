@@ -15,15 +15,25 @@ export default function InfrastructureDevelopment(){
                     <img src="Home-container-2/road.jpeg"/>
                 </div>
                 <div className="element-blue-box">
-
+                    <h3>Roads and Transportation</h3>
+                    <span>
+                    Constructing and maintaining roads, highways, and bridges to enhance connectivity between villages, towns, and urban centers. This includes all-weather roads, rural access roads, and transport facilities to improve accessibility for residents and facilitate the movement of goods and services
+                    </span>
                 </div>
                 
             </div>
             <div className ="container-elements">
                 <div className="element-blue-box">
+                <h3>Electricity and Power</h3>
+                    <span>
+                    Extending electricity infrastructure to rural areas to provide reliable access to electricity for households, businesses, and agricultural activities. This includes electrification projects, distribution networks, and promoting renewable energy sources like solar power.
+                    </span>
 
                 </div>
-                <div>
+                <div className="element-img">
+
+                <img src="Home-container-2/electricity.jpeg" id="electric"/>
+
 
                 </div>
                 
@@ -34,7 +44,10 @@ export default function InfrastructureDevelopment(){
 
                 </div>
                 <div className="element-blue-box">
-
+                <h3>Water Supply and Sanitation</h3>
+                    <span>
+                    Developing water supply systems, including piped water networks, hand pumps, and borewells, to ensure access to clean and safe drinking water in rural communities. Sanitation infrastructure such as toilets, sewage systems, and waste management facilities are also crucial for public health and hygiene.
+                    </span>
                 </div>
                 
             </div>
