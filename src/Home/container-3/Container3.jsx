@@ -9,8 +9,12 @@ export default function AgriculturalDevelopment(){
             <Container3Heading/>
             <Container3Para/>
             </div>
-        
+            <div id="container-3-main-element-2">
+            <AgriculturalComponent1/>
             <Container3image/>
+            <AgriculturalComponent2/>
+
+            </div>
         </div>
         </>
     )
@@ -36,6 +40,32 @@ function Container3Para(){
             <span>security for rural communities. Join us as we delve into the multifaceted realm of agricultural development, where the seeds of</span>
             <span>progress sow the promise of a sustainable and thriving future for Tamil Nadu's agrarian heartland.</span>
             <span>Learn more...</span>
+        </div>
+    )
+}
+function AgriculturalComponent1(){
+    return(
+        <div className="agri-component">
+            <h2>100+</h2>
+            <h3 style={{fontFamily:"Antonio, sans-serif"}}>Technological Innovation</h3>
+            <span>Advancements in agricultural technology play</span>
+            <span>a crucial role in increasing productivity and</span>
+            <span>efficiency. This includes the development of</span>
+            <span>improved crop varieties, mechanization,</span>
+            <span>precision agriculture techniques, and the use</span>
+            <span>of biotechnology</span>
+        </div>
+    )
+}
+function AgriculturalComponent2(){
+    return(
+        <div className="agri-component">
+            <h2>100%</h2>
+            <h3 style={{fontFamily:"Antonio, sans-serif"}}>Research and Development</h3>
+            <span>Investing in agricultural research and development (R&D) helps to generate  new </span>
+            <span>knowledge,technologies, and practices tailored</span>
+            <span>to local conditions, leading to continuous</span>
+            <span>improvement in productivity and resilience.</span>
         </div>
     )
 }
