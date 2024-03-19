@@ -16,6 +16,14 @@ export default function SignUp(){
     const [Passcode,setPasscode]=useState("")
     const [Data,setData] = useState()
     const [isLoading,setisLoading]=useState(false)
+
+    // otp
+    const[OTP1,setOTP1] = useState("")
+    const[OTP2,setOTP2] = useState("")
+    const[OTP3,setOTP3] = useState("")
+    const[OTP4,setOTP4] = useState("")
+    const[OTP5,setOTP5] = useState("")
+    const[OTP6,setOTP6] = useState("")
     useEffect (function(){
         let all_data ={
             
@@ -70,7 +78,20 @@ export default function SignUp(){
                 }
                 </div>
             </div>
-            <OTPVerifyPage/>
+            <OTPVerifyPage
+            setOTP1={setOTP1}
+            setOTP2={setOTP2}
+            setOTP3={setOTP3}
+            setOTP4={setOTP4}
+            setOTP5={setOTP5}
+            setOTP6={setOTP6}
+            OTP1={OTP1}
+            OTP2={OTP2}
+            OTP3={OTP3}
+            OTP4={OTP4}
+            OTP5={OTP5}
+            OTP6={OTP6}
+            />
         </div>
         </>
     )
@@ -134,9 +155,37 @@ function S_Btn({Finalize}){
     )
 }
 
-function OTPVerifyPage(){
+function OTPVerifyPage({setOTP1,setOTP2,setOTP3,setOTP4,setOTP5,setOTP6,OTP1,OTP2,OTP3,OTP4,OTP5,OTP6}){
+    function ClearOTP(){
+        setOTP1("")
+        setOTP2("")
+        setOTP3("")
+        setOTP4("")
+        setOTP5("")
+        setOTP6("")
+    }
+    function Demo(){
+        console.log(OTP1+OTP2+OTP3+OTP4+OTP5+OTP6)
+
+    }
     return(
         <div id="otp-container">
+            <div id="otp-img-container">
+            <img src="img/otp.png" id="otp-logo"/>
+            </div>
+            <div id="otp-input-container">
+                <input type="text" maxLength={"1"} value={OTP1} onChange={e=>setOTP1(e.target.value)}/>
+                <input type="text" maxLength={"1"} value={OTP2} onChange={e=>setOTP2(e.target.value)}/>
+                <input type="text" maxLength={"1"} value={OTP3} onChange={e=>setOTP3(e.target.value)}/>
+                <input type="text" maxLength={"1"} value={OTP4} onChange={e=>setOTP4(e.target.value)}/>
+                <input type="text" maxLength={"1"} value={OTP5} onChange={e=>setOTP5(e.target.value)}/>
+                <input type="text" maxLength={"1"} value={OTP6} onChange={e=>setOTP6(e.target.value)}/>
+                
+            </div>
+            <div id="otp-button-container">
+                <button onClick={ClearOTP}>Clear</button>
+                <button onClick={Demo}>Verify</button>
+            </div>
 
         </div>
     )
