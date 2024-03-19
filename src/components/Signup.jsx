@@ -18,16 +18,16 @@ export default function SignUp(){
     const [isLoading,setisLoading]=useState(false)
     useEffect (function(){
         let all_data ={
-            name:{
-                fname:Fname,
-                lname:Lname,
-            },
+            
+            fname:Fname,
+            lname:Lname,
             mail:eMail,
             password:Passcode,
             phone:Mobileno,
             address:AddressLine,
             district:DistrictLine,
-            pincode:Postalcode
+            pincode:Postalcode,
+            otp:null
         }
         if (Fname!="" && Lname!="" && eMail!="" && Mobileno!="" && AddressLine!="" && DistrictLine!="" && Postalcode != "" && Passcode !=""){
             setData(all_data)
@@ -70,6 +70,7 @@ export default function SignUp(){
                 }
                 </div>
             </div>
+            <OTPVerifyPage/>
         </div>
         </>
     )
@@ -133,6 +134,15 @@ function S_Btn({Finalize}){
     )
 }
 
+function OTPVerifyPage(){
+    return(
+        <div id="otp-container">
+
+        </div>
+    )
+}
+
+
 // Loading animation
 function LoadingAnimation(){
     return (
@@ -141,3 +151,6 @@ function LoadingAnimation(){
       </div>
     );
   };
+
+
+  

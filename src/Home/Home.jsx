@@ -3,12 +3,14 @@ import Header from "../Header/Header"
 import "./Home.css"
 import { Slideshow } from "./Slide"
 import InfrastructureDevelopment from "./container-2/Container"
+import AgriculturalDevelopment from "./container-3/Container3"
 export default function Home(){
     return(
         <>
         <Header/>
         <HeadingContainer/>
         <InfrastructureDevelopment/>
+        <AgriculturalDevelopment/>
         </>
     )
 }
