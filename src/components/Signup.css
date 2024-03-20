@@ -76,7 +76,7 @@ h2 {
     position:absolute;
     width: 90vh;
     height: 50vh;
-    background-color: #887c7c;
+    background-color: #b2aeae;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
@@ -105,7 +105,7 @@ h2 {
 
 }
 #otp-input-container input{
-    border: 1px solid #887c7c;
+    border: 1px solid #7f7e7e;
     border-radius:10px ;
     height: 4rem;
     width: 2.5rem;
@@ -115,7 +115,7 @@ h2 {
 
 }
 #otp-button-container{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: flex;
     gap: 4rem;
 }
