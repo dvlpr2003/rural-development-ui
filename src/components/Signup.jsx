@@ -16,7 +16,7 @@ export default function SignUp(){
     const [Passcode,setPasscode]=useState("")
     const [Data,setData] = useState()
     const [isLoading,setisLoading]=useState(false)
-
+    const [isVerify,setisVerify] = useState(false)
     // otp
     const[OTP1,setOTP1] = useState("")
     const[OTP2,setOTP2] = useState("")
@@ -24,6 +24,7 @@ export default function SignUp(){
     const[OTP4,setOTP4] = useState("")
     const[OTP5,setOTP5] = useState("")
     const[OTP6,setOTP6] = useState("")
+    const [OTP,setOTP]=useState("") // main otp
     useEffect (function(){
         let all_data ={
             
@@ -49,9 +50,22 @@ export default function SignUp(){
             const response = await axios.post("http://127.0.0.1:8000/api/signup/",Data);
             console.log(response.data)
             setisLoading(false)
+            setisVerify(true)
+
         }catch (error){
             console.log("raja you have error",error)
             setisLoading(false)
+        }
+    }
+    async function Verify_Otp(){
+        setOTP(OTP1+OTP2+OTP3+OTP4+OTP5+OTP6)
+
+        try{
+            const response = await axios.get(`http://127.0.0.1:8000/api/email/${eMail}/otp/${OTP}/`)
+            if(response["data"][0] === "Success") setisVerify(false);
+        }catch(error){
+            console.log("error",error)
+
         }
     }
     return(
@@ -78,6 +92,7 @@ export default function SignUp(){
                 }
                 </div>
             </div>
+            { isVerify ?
             <OTPVerifyPage
             setOTP1={setOTP1}
             setOTP2={setOTP2}
@@ -91,7 +106,10 @@ export default function SignUp(){
             OTP4={OTP4}
             OTP5={OTP5}
             OTP6={OTP6}
+            Verify_Otp={Verify_Otp}
+
             />
+ :""}
         </div>
         </>
     )
@@ -155,7 +173,7 @@ function S_Btn({Finalize}){
     )
 }
 
-function OTPVerifyPage({setOTP1,setOTP2,setOTP3,setOTP4,setOTP5,setOTP6,OTP1,OTP2,OTP3,OTP4,OTP5,OTP6}){
+function OTPVerifyPage({setOTP1,setOTP2,setOTP3,setOTP4,setOTP5,setOTP6,OTP1,OTP2,OTP3,OTP4,OTP5,OTP6,Verify_Otp}){
     function ClearOTP(){
         setOTP1("")
         setOTP2("")
@@ -165,8 +183,7 @@ function OTPVerifyPage({setOTP1,setOTP2,setOTP3,setOTP4,setOTP5,setOTP6,OTP1,OTP
         setOTP6("")
     }
     function Demo(){
-        console.log(OTP1+OTP2+OTP3+OTP4+OTP5+OTP6)
-
+        Verify_Otp()
     }
     return(
         <div id="otp-container">
@@ -180,7 +197,6 @@ function OTPVerifyPage({setOTP1,setOTP2,setOTP3,setOTP4,setOTP5,setOTP6,OTP1,OTP
                 <input type="text" maxLength={"1"} value={OTP4} onChange={e=>setOTP4(e.target.value)}/>
                 <input type="text" maxLength={"1"} value={OTP5} onChange={e=>setOTP5(e.target.value)}/>
                 <input type="text" maxLength={"1"} value={OTP6} onChange={e=>setOTP6(e.target.value)}/>
-                
             </div>
             <div id="otp-button-container">
                 <button onClick={ClearOTP}>Clear</button>
