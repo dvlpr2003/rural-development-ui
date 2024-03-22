@@ -1,6 +1,7 @@
 #info-container-main{
     position: relative;
     height: 104vh;
+    background-color: #f3f9ff;
 }
 #info-container-main h1{
     margin-top: 1.5rem;

@@ -1,0 +1,104 @@
+#Education-system-main{
+    /* border: 1px solid black; */
+    background-color: #fafbf5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Education-system-container-1{
+    /* border: 1px solid black; */
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+#Education-system-container-2{
+    /* border: 1px solid black; */
+    width: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Education-system-Heading{
+    font-family: "Carter One", system-ui;
+
+}
+#Education-system-image img{
+    height: 38rem;
+    border-radius: 20px;
+
+}
+.Education-system-containers{
+    /* border: 1px solid red; */
+    width: 85vh;
+    height: 100vh;
+}
+#Education-system-para{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Assistant", sans-serif;
+    font-size: 1rem;
+
+}
+#Education-system-para span{
+    margin-left: 0.5rem;
+    color: #939090;
+}
+#Education-system-para button {
+    margin-top: 1rem;
+    width: 10rem;
+    background-color: inherit;
+    color: #938f8f;
+    border: 1px solid #938f8f;
+    border-radius: 50px;
+}
+#Education-system-elements{
+    /* border: 1px solid green; */
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Education-system-elements-items{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    
+
+}
+.Education-item-img{
+    border: 1px solid  #efefff;
+    background-color: #efefff;
+    border-radius: 20px;
+    margin-left: 1rem;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Education-item-img img {
+    height: 2.5rem;
+}
+.Education-item-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Education-item-txt h3 {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-family: "Antonio", sans-serif;
+}
+.Education-item-txt span{
+    font-family: "Assistant", sans-serif;
+    font-size:0.9rem;
+
+    
+}

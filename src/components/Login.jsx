@@ -14,19 +14,16 @@ function Login(){
   const [pEmpty,setpEmpty]=useState(false)
   const [EError,setEError]=useState(false)
   const [PError,setPError]=useState(false)
-
   async function LoginAction(){
     if (Username === "") return setuEmpty(true);
     if (Username != "")  setuEmpty(false);
     if (password === "") return setpEmpty(true);
     if (password != "")  setpEmpty(false);
-
     try{
       setisLoading(true)
       await delay(2500)
       const response = await axios.get(`http://127.0.0.1:8000/api/email/${Username}`);
       console.log(response.data)
-
       if (response.data["password"] != password){
         setPError(true)
         setisLoading(false)
@@ -38,7 +35,6 @@ function Login(){
       setisLoading(false)
     }
     setisLoading(false)
-
   }
     return(
         <>

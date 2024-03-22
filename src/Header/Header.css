@@ -12,6 +12,7 @@
     gap: 0.3rem;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 
 }
 #Header-Title span:first-child{

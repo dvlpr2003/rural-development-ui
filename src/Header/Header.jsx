@@ -5,15 +5,15 @@ import './Header.css'
 export default function Header(){
     return(
         <div id="Header-container">
-            <div id='Header-Title'>
-                <span>Rural</span>
+            <NavLink to="/" id='Header-Title'>
+                <span style={{color:"black"}}>Rural</span>
                 <span>Development</span>
-            </div>
+            </NavLink >
             <div id='Header-Elements'>
                 <span>Service</span>
                 <span>Features</span>
                 <span>Development</span>
-                <span>Query</span>
+                <span>Officer login</span>
             </div>
             <div id='Header-Login-Signup'>
                 <NavLink to ="/signup" id='signup-btn'>Sign up</NavLink>

@@ -4,6 +4,7 @@ import "./Home.css"
 import { Slideshow } from "./Slide"
 import InfrastructureDevelopment from "./container-2/Container"
 import AgriculturalDevelopment from "./container-3/Container3"
+import Education from "./container-4/container4"
 export default function Home(){
     return(
         <>
@@ -11,6 +12,7 @@ export default function Home(){
         <HeadingContainer/>
         <InfrastructureDevelopment/>
         <AgriculturalDevelopment/>
+        <Education/>
         </>
     )
 }
