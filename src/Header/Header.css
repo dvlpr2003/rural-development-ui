@@ -1,4 +1,5 @@
 #Header-container{
+    position: relative;
     border: 1px solid #e9e8e8;
     width: 100%;
     height: 6.5rem;
@@ -36,6 +37,7 @@
     align-self: center;
     margin-right: auto;
     margin-left: auto;
+    text-decoration: none;
 
 }
 #Header-Login-Signup{
@@ -72,5 +74,64 @@
     height: 2.5rem;
     width: 6.5rem;
     font-size: 1rem;
+
+}
+#service-options{
+    position:absolute;
+    border: 1px solid #d5d5d5;
+    background-color: white;
+    border-radius: 10px;
+    width: 15rem;
+    height: 10rem;
+    top: 6rem;
+    left: 38rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    font-family: "Arsenal", sans-serif;
+    
+
+
+}
+#service-options div {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    margin-left: 0.5rem;
+    gap: 1rem;
+    cursor: pointer;
+ 
+}
+#service-options div span {
+    font-size: 1.1rem;
+}
+#service-options div span:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#info-dev-options{
+    position: absolute;
+    border: 1px solid #d5d5d5;
+    border-radius: 10px;
+    width: 16rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    left: 53.5rem;
+    top: 8rem;
+    font-family: "Arsenal", sans-serif;
+
+
+}
+#info-dev-options span {
+    margin-left: 1rem;
+}
+.h-6{
+    height: 1rem;
 
 }

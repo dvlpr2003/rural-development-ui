@@ -22,6 +22,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 2.5rem;
 }
 #Education-system-Heading{
     font-family: "Carter One", system-ui;
@@ -51,7 +52,8 @@
 }
 #Education-system-para button {
     margin-top: 1rem;
-    width: 10rem;
+    width: 7rem;
+    height: 2rem;
     background-color: inherit;
     color: #938f8f;
     border: 1px solid #938f8f;
@@ -99,6 +101,7 @@
 .Education-item-txt span{
     font-family: "Assistant", sans-serif;
     font-size:0.9rem;
+    color: #938f8f;
 
     
 }
