@@ -5,6 +5,7 @@ import { Slideshow } from "./Slide"
 import InfrastructureDevelopment from "./container-2/Container"
 import AgriculturalDevelopment from "./container-3/Container3"
 import Education from "./container-4/container4"
+import Footer from "../footer/footer"
 export default function Home(){
     return(
         <>
@@ -13,6 +14,7 @@ export default function Home(){
         <InfrastructureDevelopment/>
         <AgriculturalDevelopment/>
         <Education/>
+        <Footer/>
         </>
     )
 }

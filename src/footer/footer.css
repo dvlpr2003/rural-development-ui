@@ -1,0 +1,177 @@
+#footer-main {
+    border: 1px solid rgb(229, 228, 228);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-containers{
+    /* border: 1px solid black; */
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#instagram-profiles{
+    margin-top: 2rem;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+#instagram-profiles div {
+    display: flex;
+    gap: 0.5rem;
+    font-family: "Arsenal", sans-serif;
+    font-weight: 50px;
+}
+#copy-right-container{
+    /* border: 1px solid green; */
+    /* width: 10rem; */
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    align-self: flex-end;
+    font-family: "Arsenal", sans-serif;
+
+}
+#footer-heading{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Carter One", system-ui;
+
+}
+#footer-heading span:first-child{
+    font-size: 1rem;
+}
+#footer-heading span:last-child{
+    font-size: 1.8rem;
+}
+#footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: "Arsenal", sans-serif;
+
+    font-size: 1.2rem;
+}
+
+#footer-contact div{
+    border: 1px solid #6ed16e;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6ed16e;
+}
+#foo-heading-container{
+    position: relative;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+#term-foo-con{
+
+    font-family: "Arsenal", sans-serif;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    align-self: flex-end;
+    display: flex;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+#break-wall{
+    border: 1px solid #3f3e3e;
+    height: 1.2rem;
+}
+#footer-service-items{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer-service-item-elements{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-left: 0.2rem;
+}
+.element-heading{
+    font-family: "Arsenal", sans-serif;
+    font-weight: bold;
+    color: #797878;
+}
+#info-sub-items{
+    display: flex;
+    flex-direction: column;
+    font-family: "Arsenal", sans-serif;
+    color: #797878;
+    gap: 0.5rem;
+
+
+}
+.rs-foo-head{
+    margin-top: 0.9rem;
+    font-family: "Antonio", sans-serif;
+    font-weight: bold;
+
+    
+    font-size: 1.2rem;
+
+}
+#info-sub-items{
+    margin-left: 1rem;
+}
+
+#foo-p-lands{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: "Arsenal", sans-serif;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+    
+}
+#foo-p-lands span {
+    color: #797878;
+}
+a {
+    text-decoration: none;
+}
+#people-login {
+    margin-top: 1.3rem;
+}
+#people-login-heading{
+    font-family: "Arsenal", sans-serif;
+    font-weight: bold;
+    color: #797878;
+
+}
+#officer-and-aboutus{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: "Arsenal", sans-serif;
+    font-weight: bold;
+
+}
+#officer-and-aboutus span {
+    color: #797878;
+}
