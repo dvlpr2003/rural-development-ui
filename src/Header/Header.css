@@ -1,6 +1,9 @@
 #Header-container{
     position: relative;
     border: 1px solid #e9e8e8;
+    border-top: none;
+    border-right: none;
+    border-left: none;
     width: 100%;
     height: 6.5rem;
     display: flex;

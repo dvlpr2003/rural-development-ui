@@ -1,0 +1,212 @@
+#officer-main-page{
+    height: 100vh;
+    display: flex;
+}
+#officer-options{
+    border: 1px solid black;
+    width: 20rem;
+}
+#officer-Query-page{
+    border: 1px solid black;
+    border-left: none;
+    width: 45rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+#officer-item-container{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    
+
+}
+.officer-item-container-options{
+    /* border: 1px solid black; */
+    width: 15rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.officer-item-container-options span {
+    font-family: "Barlow", sans-serif;
+}
+.officer-user-svg{
+    height: 2rem;
+    width: 2rem;
+}
+
+#Registered-user-main{
+    /* border: 1px solid yellow; */
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 1.5rem;
+    overflow-y: auto;
+
+}
+#Registered-user-main::-webkit-scrollbar {
+    display: none;
+  }
+.Registered-user-items{
+    border: 1px solid rgb(220, 218, 218);
+    border-radius: 20px;
+    /* width: 95vh; */
+    width: 20rem;
+    height: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.user-dvd{
+    height: 2rem;
+    width: 2rem;
+}
+.user-profile-svg{
+    border: 1px solid #8e8eee;
+    ;
+    border-radius:50% ;
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+.user-profile-content{
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.user-profile-name{
+    margin-top: 1.5rem;
+    margin-right: auto;
+    margin-bottom: auto;
+    align-self: center;
+    display: flex;
+    gap: 0.5rem;
+
+}
+.user-profile-name span{
+    font-family: "Andada Pro", serif;
+}
+.user-profile-complaint{
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    width: 7rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 0.4rem;
+    align-self: flex-end;
+    font-family: "Arsenal", sans-serif;
+    font-weight: normal;
+    color: #898989;
+
+}
+.complaint-svg {
+    border: 1px solid rgb(130, 127, 127);
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(161, 44, 44);
+    font-family: "Arsenal", sans-serif;
+    font-weight: normal;
+
+    
+}
+.complaint-dvd{
+    height: 1.5rem;
+    border: 1px solid black;
+}
+
+#User-overview-main {
+    /* border: 1px solid #a10081; */
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+
+}
+#user-overview-items{
+    margin-top: 3rem;
+    /* border: 1px solid rgb(44, 44, 26); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 23rem;
+    height: 23rem;
+}
+#user-overview-items-svg{
+    margin-top: 1rem;
+    border: 1px solid #8e8eee;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#user-overview-name{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Andada Pro", serif;
+    font-size: 1.3rem;
+}
+#user-overview-contacts {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+#user-overview-contacts span {
+    font-family: "Arsenal", sans-serif;
+
+}
+#user-mail{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#user-mail-svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#user-phone-svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#user-phone{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+#user-address{
+    margin-top: 0.2rem;
+    display: flex;
+    gap: 0.5rem;
+}
