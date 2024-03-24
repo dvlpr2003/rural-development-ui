@@ -46,8 +46,8 @@ export default function Footer(){
             <div id="people-login">
                 <span id="people-login-heading">People login</span>
                 <div id="foo-p-lands">
-                    <NavLink to="Signup"><span>Signup</span></NavLink>
-                    <NavLink to="Login"><span>Login</span></NavLink>
+                    <NavLink to="/Signup"><span>Signup</span></NavLink>
+                    <NavLink to="/Login"><span>Login</span></NavLink>
                 </div>
             </div>
             <div id="officer-and-aboutus">
@@ -88,7 +88,7 @@ export default function Footer(){
 
             </div>
             <div id="copy-right-container">
-                <span>&copy;dvlpr_2003 Company Limited</span>
+                <span>&copy;XXX Company Limited</span>
             </div>
 
         </div>

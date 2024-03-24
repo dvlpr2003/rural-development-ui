@@ -7,20 +7,22 @@ import Login from './components/Login'
 import SignUp from './components/Signup'
 import Home from './Home/Home'
 import OfficerPage from './officer/officer'
+import Complaints from './complaints/Complaints'
 
 function App() {
 
   return (
     <>
-    {/* <BrowserRouter>
+    <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path='/Login' element={<Login/>}/>
       <Route path='/signup' element={<SignUp/>}/>
+      <Route path='/People' element={<Complaints/>}/>
     </Routes>
-    </BrowserRouter> */}
-    <OfficerPage/>
-
+    </BrowserRouter>
+    {/* <OfficerPage/> */}
+    {/* <Complaints/> */}
     {/* <LoadingAnimation/> */}
     
     </>
