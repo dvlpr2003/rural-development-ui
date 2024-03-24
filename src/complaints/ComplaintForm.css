@@ -1,0 +1,132 @@
+
+
+
+#complaint-form-main{
+    border: 1px solid black;
+    background-color: #aab3b4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#complaint-heading {
+    border: 1px solid rgb(174, 193, 197);
+    width: 100%;
+    height: 7rem;
+}
+#form-body{
+    /* border: 1px solid black; */
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 2rem;
+}
+#category{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+     */
+     justify-content: center;
+     background-color: white;
+     gap: 1.5rem;
+    border: 1px solid #e3dddd;
+    border-radius: 20px;
+    height: 8rem;
+}
+#category span{
+    font-family: "Assistant", sans-serif;
+
+    margin-left: 1rem;
+}
+#category select{
+    border: 1px solid #a3a2a2;
+    margin-left: 1rem;
+    width: 15rem;
+    height: 3rem;
+    border-radius: 10px;
+    padding-left: 1rem;
+}
+#comp-name{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    border: 1px solid #e3dddd;
+    border-radius: 20px;
+    height: 8rem;
+}
+#comp-name span {
+    font-family: "Assistant", sans-serif;
+
+    margin-left: 1rem;
+}
+#comp-name input ,#comp-location input,#comp-pincode input{
+    border: 1px solid #a3a2a2;
+    margin-left: 1rem;
+    width: 13.5rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    padding-left: 1rem;
+}
+#comp-image,#comp-location,#comp-pincode{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    border: 1px solid #e3dddd;
+    border-radius: 20px;
+    height: 8rem;
+}
+#comp-image input{
+    margin-left: 1rem;
+
+}
+#comp-image span ,#comp-dist span ,#comp-location span ,#comp-pincode span, #complaint-txt span{
+    margin-left: 1rem;
+    font-family: "Assistant", sans-serif;
+
+}
+#comp-dist{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    border: 1px solid #e3dddd;
+    border-radius: 20px;
+    height: 8rem;
+}
+#comp-dist select{
+    border: 1px solid #a3a2a2;
+    margin-left: 1rem;
+    width: 15rem;
+    height: 3rem;
+    border-radius: 10px;
+    padding-left: 1rem;
+}
+#complaint-txt{
+    background-color: white;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    border: 1px solid #e3dddd;
+    border-radius: 20px;
+}
+
+textarea{
+    border: 1px solid #a3a2a2;
+    border-radius: 20px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    width: 45rem;
+    height: 13rem;
+    margin-left: 1rem;
+    margin-bottom: 0.4rem;
+}
