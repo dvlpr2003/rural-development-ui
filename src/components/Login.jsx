@@ -3,6 +3,7 @@ import Header from "../Header/Header"
 import { useState } from "react";
 import axios from "axios"
 import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 const delay = ms => new Promise(
   resolve => setTimeout(resolve, ms)
 );
@@ -14,6 +15,7 @@ function Login(){
   const [pEmpty,setpEmpty]=useState(false)
   const [EError,setEError]=useState(false)
   const [PError,setPError]=useState(false)
+  const navigate = useNavigate();
   async function LoginAction(){
     if (Username === "") return setuEmpty(true);
     if (Username != "")  setuEmpty(false);
@@ -22,12 +24,15 @@ function Login(){
     try{
       setisLoading(true)
       await delay(2500)
-      const response = await axios.get(`http://127.0.0.1:8000/api/email/${Username}`);
+      const response = await axios.get(`http://127.0.0.1:8000/api/email/${Username}/password/${password}/`);
       console.log(response.data)
-      if (response.data["password"] != password){
+      if (response.data["status"] === "invalid password"){
         setPError(true)
         setisLoading(false)
-      };
+      } else if (response.data["status"]=="success"){
+        console.log("hi")
+        navigate("/People")
+      }
     }catch (error){
       console.log("raja you have error ",error)
       console.log(error["response"]["data"]["detail"])

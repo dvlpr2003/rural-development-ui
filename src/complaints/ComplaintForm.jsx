@@ -15,7 +15,6 @@ export default function ComplaintForm(){
     const handleFileChange = (event) => {
         setComplaintImage(event.target.files[0]);
       };
-
     async function UpdateComplaint(){
         const formData = new FormData();
         formData.append('ComplaintImage', ComplaintImage);
@@ -33,15 +32,13 @@ export default function ComplaintForm(){
                 }
               })
             console.log(response.data)
-            // console.log(formData.get("name"))
-            // console.log(formData.get("image"))
+         
         }catch(error){
             console.log(error)
         }
     }
     return(
         <div id="complaint-form-main">
-            {/* <FormHeading/> */}
             <FormBody 
             setComplaintCategory={setComplaintCategory}
             setComplaintName={setComplaintName}

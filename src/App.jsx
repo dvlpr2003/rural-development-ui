@@ -14,18 +14,18 @@ function App() {
 
   return (
     <>
-    {/* <BrowserRouter>
+    <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path='/Login' element={<Login/>}/>
-      <Route path='/signup' element={<SignUp/>}/>
-      <Route path='/People' element={<Complaints/>}/>
+      <Route path="/" Component={Home}/>
+      <Route exact path='/Login' Component={Login}/>
+      <Route path='/signup' Component={SignUp}/>
+      <Route path='/People' Component={Complaints}/>
     </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter>
     {/* <OfficerPage/> */}
     {/* <Complaints/> */}
     {/* <LoadingAnimation/> */}
-    <ComplaintForm/>
+    {/* <ComplaintForm/> */}
     
     </>
  
