@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import Header from "../Header/Header"
 import Home from "../Home/Home"
 import Footer from "../footer/footer"
@@ -5,10 +6,10 @@ import Footer from "../footer/footer"
 import "./Complaints.css"
 
 
-export default function Complaints(){
+export default function Complaints({isLogin}){
     return(
         <>
-        <Header/>
+        <Header isLogin={isLogin}/>
         <div id="complaint-main">
             <ComplaintHeading/>
         </div>
@@ -29,7 +30,10 @@ function ComplaintHeading(){
                 <span>Building Stronger Foundations</span>
                 <span>Redefining Rural Development in Tamil Nadu</span>
             </div>
+            <NavLink to="/Complaint-form">
             <button>Raise your Complaint</button>
+            </NavLink>
+            
 
         </div>
     )
@@ -74,7 +78,9 @@ function ComplaintComponent1Items(){
                         <span>facilitating economic activity, mobility,  and </span>
                         <span>societal development.</span>
                     </div>
-                    <button className="devop-btn">Raise Complaint</button>
+                    <NavLink to ="/Complaint-form">
+                        <button className="devop-btn">Raise Complaint</button>
+                    </NavLink>
 
                 </div>
                 <div className="complaint-r-devop">
@@ -94,7 +100,9 @@ function ComplaintComponent1Items(){
 <span>innovation, and sustaining economic growth.</span>
 
 </div>
+<NavLink to ="/Complaint-form" >
 <button className="devop-btn">Raise Complaint</button>
+</NavLink>
 
 
 
@@ -117,7 +125,9 @@ function ComplaintComponent1Items(){
                     <span>clean water and proper waste management.</span>
 
                     </div>
-                    <button className="devop-btn">Raise Complaint</button>
+                    <NavLink to="/Complaint-form">
+                        <button className="devop-btn">Raise Complaint</button>
+                    </NavLink>
 
 
                 </div>
@@ -145,7 +155,9 @@ function ComplaintComponent1Items(){
                     <span>and rural livelihoods.</span>
 
                     </div>
-                    <button className="devop-btn">Raise Complaint</button>
+                    <NavLink to="/Complaint-form">
+                        <button className="devop-btn">Raise Complaint</button>
+                    </NavLink>
 
 
 
@@ -169,7 +181,9 @@ function ComplaintComponent1Items(){
                     <span>advancement, and economic prosperity.</span>
 
                     </div>
-                    <button className="devop-btn">Raise Complaint</button>
+                    <NavLink to="/Complaint-form">
+                        <button className="devop-btn">Raise Complaint</button>
+                    </NavLink>
 
 
 
@@ -201,7 +215,9 @@ function ComplaintComponent2Items(){
                 <span>Building Stronger Foundations</span>
                 <span>Redefining Rural Development in Tamil Nadu</span>
             </div>
-            <button>Raise Complaint</button>
+            <NavLink to="/Complaint-form">
+                <button>Raise Complaint</button>
+            </NavLink>
 
         </div>
     )

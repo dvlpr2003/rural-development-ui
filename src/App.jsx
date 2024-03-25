@@ -12,21 +12,23 @@ import ComplaintForm from './complaints/ComplaintForm'
 
 function App() {
   const [Username,setUsername]=useState("")
+  const [isLogin,setisLogin]=useState(false)
+
 
 
   return (
     <>
-    <BrowserRouter>
+    {/* <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route exact path='/Login' element={<Login Username={Username} setUsername={setUsername}/>}/>
-      <Route path='/signup' element={<SignUp/>}/>
-      <Route path='/People' element={<Complaints/>}/>
-      <Route path='/Complaint-form' element={<ComplaintForm/>}/>
+      <Route path="/" element={<Home isLogin={isLogin}/>}/>
+      <Route exact path='/Login' element={<Login Username={Username} setUsername={setUsername} setisLogin={setisLogin} isLogin={isLogin}/>}/>
+      <Route path='/signup' element={<SignUp isLogin={isLogin}/>}/>
+      <Route path='/People' element={<Complaints isLogin={isLogin}/>}/>
+      <Route path='/Complaint-form' element={<ComplaintForm isLogin={isLogin}/>}/>
 
     </Routes>
-    </BrowserRouter>
-    {/* <OfficerPage/> */}
+    </BrowserRouter> */}
+    <OfficerPage/>
     {/* <Complaints/> */}
     {/* <LoadingAnimation/> */}
     {/* <ComplaintForm/> */}

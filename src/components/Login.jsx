@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const delay = ms => new Promise(
   resolve => setTimeout(resolve, ms)
 );
-function Login({Username,setUsername}){
+function Login({Username,setUsername,setisLogin,isLogin}){
   // const [Username,setUsername]=useState("")
   const [password,setPassword] = useState("")
   const [isLoading,setisLoading]=useState(false)
@@ -30,8 +30,9 @@ function Login({Username,setUsername}){
         setPError(true)
         setisLoading(false)
       } else if (response.data["status"]=="success"){
-        console.log("hi")
         navigate("/People")
+        setisLogin(true)
+
       }
     }catch (error){
       console.log("raja you have error ",error)
@@ -43,7 +44,7 @@ function Login({Username,setUsername}){
   }
     return(
         <>
-        <Header/>
+        <Header isLogin={isLogin}/>
         <div id="login-container">
         <div id="login-image-container">
           <img src="img/kid_login.jpeg" alt="login-kid-img"/>

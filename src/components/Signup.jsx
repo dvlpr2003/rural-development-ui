@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const delay = ms => new Promise(
     resolve => setTimeout(resolve, ms)
   );
-export default function SignUp(){
+export default function SignUp({isLogin}){
     const navigate = useNavigate();
 
     const [Fname,setFname]=useState("")
@@ -77,7 +77,7 @@ export default function SignUp(){
     }
     return(
         <>
-        <Header/>
+        <Header isLogin={isLogin}/>
         <div id="signup-container-main">
             <div id="signup-img-container" className="signup-container">
                 <img src="img/kid-signup.jpeg" alt="kid-img"/>

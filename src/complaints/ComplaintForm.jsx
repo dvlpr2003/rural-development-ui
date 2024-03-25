@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-export default function ComplaintForm(){
+export default function ComplaintForm({isLogin}){
     const navigate = useNavigate();
 
     const [ComplaintImage, setComplaintImage] = useState();
@@ -49,7 +49,7 @@ export default function ComplaintForm(){
     }
     return(
         <>
-        <Header/>
+        <Header isLogin={isLogin}/>
         <div id="complaint-form-main">
             <FormBody 
             setComplaintCategory={setComplaintCategory}

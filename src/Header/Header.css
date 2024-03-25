@@ -138,3 +138,19 @@
     height: 1rem;
 
 }
+#login-round-container{
+    /* border: 1px solid black; */
+
+    border-radius:10px ;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#login-round-container svg {
+    height: 4rem;
+    stroke: rgb(146, 169, 207);
+}

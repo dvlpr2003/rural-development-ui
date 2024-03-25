@@ -6,11 +6,11 @@ import InfrastructureDevelopment from "./container-2/Container"
 import AgriculturalDevelopment from "./container-3/Container3"
 import Education from "./container-4/container4"
 import Footer from "../footer/footer"
-export default function Home(){
+export default function Home({isLogin}){
     return(
         <>
-        <Header/>
-        <HeadingContainer/>
+        <Header isLogin={isLogin}/>
+        <HeadingContainer isLogin={isLogin}/>
         <InfrastructureDevelopment/>
         <AgriculturalDevelopment/>
         <Education/>
@@ -18,17 +18,17 @@ export default function Home(){
         </>
     )
 }
-function HeadingContainer(){
+function HeadingContainer({isLogin}){
     return(
         <div id="heading-container">
-            <Heading/>
+            <Heading isLogin={isLogin}/>
             <HeadingImage/>
             
 
         </div>
     )
 }
-function Heading(){
+function Heading({isLogin}){
     return(
         <div className="H-containers" id="heading">
             <div className="heading-text-container">
@@ -47,6 +47,7 @@ function Heading(){
                 communities.
                 </p>
             </div>
+            { !isLogin ?
             <div id="Heading-buttons">
                 <NavLink to="/login" className="Btn-items">
                     Login
@@ -54,7 +55,8 @@ function Heading(){
                 <NavLink to="/signup" className="Btn-items">
                     Signup
                 </NavLink>
-            </div>
+            </div>:""
+            }
         </div>
 
     )

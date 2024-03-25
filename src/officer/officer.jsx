@@ -1,125 +1,40 @@
+import { useEffect, useState } from "react"
 import "./officer.css"
-
-
-
-const  data = [
-    {
-        fname:"raja",
-        lname:"k",
-        mail:"gayathrigaya698@gmail.com",
-        phone:"8220902938",
-        address:"Thirumalaikeni",
-        district:"Dindigul",
-        pincode:"624306"
-    },
-    {
-        fname:"gayathri",
-        lname:"v",
-        mail:"gayathri98@gmail.com",
-        phone:"82209029584",
-        address:"Siluvathur",
-        district:"Dindigul",
-        pincode:"624306"
-    },
-    {
-        fname:"gayathri",
-        lname:"v",
-        mail:"gayathri98@gmail.com",
-        phone:"82209029584",
-        address:"Siluvathur",
-        district:"Dindigul",
-        pincode:"624306"
-    },
-    {
-        fname:"gayathri",
-        lname:"v",
-        mail:"gayathri98@gmail.com",
-        phone:"82209029584",
-        address:"Siluvathur",
-        district:"Dindigul",
-        pincode:"624306"
-    },
-    {
-        fname:"gayathri",
-        lname:"v",
-        mail:"gayathri98@gmail.com",
-        phone:"82209029584",
-        address:"Siluvathur",
-        district:"Dindigul",
-        pincode:"624306"
-    },
-    {
-        fname:"gayathri",
-        lname:"v",
-        mail:"gayathri98@gmail.com",
-        phone:"82209029584",
-        address:"Siluvathur",
-        district:"Dindigul",
-        pincode:"624306"
-    },
-    {
-        fname:"gayathri",
-        lname:"v",
-        mail:"gayathri98@gmail.com",
-        phone:"82209029584",
-        address:"Siluvathur",
-        district:"Dindigul",
-        pincode:"624306"
-    },
-    {
-        fname:"gayathri",
-        lname:"v",
-        mail:"gayathri98@gmail.com",
-        phone:"82209029584",
-        address:"Siluvathur",
-        district:"Dindigul",
-        pincode:"624306"
-    },
-    {
-        fname:"gayathri",
-        lname:"v",
-        mail:"gayathri98@gmail.com",
-        phone:"82209029584",
-        address:"Siluvathur",
-        district:"Dindigul",
-        pincode:"624306"
-    },
-    {
-        fname:"gayathri",
-        lname:"v",
-        mail:"gayathri98@gmail.com",
-        phone:"82209029584",
-        address:"Siluvathur",
-        district:"Dindigul",
-        pincode:"624306"
-    },    {
-        fname:"gayathri",
-        lname:"v",
-        mail:"gayathri98@gmail.com",
-        phone:"82209029584",
-        address:"Siluvathur",
-        district:"Dindigul",
-        pincode:"624306"
-    },
-]
-export default function OfficerPage(){
-    return(
-        <div id="officer-main-page">
-        <OfficerOption/>
-        <QueryPage/>
-        <UserOverview/>
-
-        </div>
-    )
-}
-function OfficerOption(){
+import axios from "axios"
+export default function OfficerOption(){
+    const [totalUser,settotalUser]=useState()
+    const [totalComplaint,settotalComplaint]=useState()
+    useEffect(function(){
+        async function GetTotal(){
+            try{
+                const response = await axios.get("http://127.0.0.1:8000/api/total_user/")
+                console.log(response.data)
+                settotalUser(response.data["total"])
+            }catch(error){
+                console.log(error)
+            }
+        }
+        GetTotal()
+    },[])
+    useEffect(function(){
+        async function GetTotalComplaints(){
+            try{
+                const response = await axios.get("http://127.0.0.1:8000/api/total_complaint/")
+                console.log(response.data)
+                settotalComplaint(response.data["total"])
+            }catch(error){
+                console.log(error)
+            }
+        }
+        GetTotalComplaints()
+    },[])
     return(
         <div id="officer-options">
-            <OfficerItems/>
+            <OfficerItems totalUser={totalUser} totalComplaint={totalComplaint}/>
         </div>
     )
 }
-function OfficerItems(){
+function OfficerItems({totalUser,totalComplaint}){
     return(
         <div id="officer-item-container">
             <div className="officer-item-container-options">
@@ -133,7 +48,7 @@ function OfficerItems(){
                     Registered Users
                 </span> 
                 <div style={{border:"1px solid red",width:"1rem",height:"1rem",display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",backgroundColor:"red",color:"white",fontSize:"0.8rem"}}>
-                    <span>1</span>
+                    <span>{totalUser}</span>
                 </div>
                 </div>
                 
@@ -146,10 +61,10 @@ function OfficerItems(){
                 </div>
                 <div style={{display:"flex",gap:"1rem"}}>
                 <span>
-                    Query
+                    Complaints
                 </span> 
                 <div style={{border:"1px solid red",width:"1rem",height:"1rem",display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",backgroundColor:"red",color:"white",fontSize:"0.8rem"}}>
-                    <span>1</span>
+                    <span>{totalComplaint}</span>
                 </div>
                 </div>
             </div>
@@ -175,9 +90,9 @@ function QueryPage(){
 function RegisteredUser(){
     return(
         <div id="Registered-user-main">
-            {
+            {/* {
                 data.map((e)=><RegisteredUserItems />)
-            }
+            } */}
 
         </div>
     )
