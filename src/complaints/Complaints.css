@@ -13,18 +13,21 @@
     gap: 1rem;
 
 }
-#complaint-heading {
+#complaint-headings{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.7rem;
+    border: none;
+    font-family: "Candal", sans-serif;
+
 }
-#complaint-heading h1{
+#complaint-headings h1{
     font-family: "Candal", sans-serif;
     color: #404040;
 }
-#complaint-heading h1:last-child{
+#complaint-headings h1:last-child{
     font-size: 2.6rem;
 }
 /* #jldoid{

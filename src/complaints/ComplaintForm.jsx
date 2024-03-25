@@ -2,9 +2,15 @@ import { useSearchParams } from "react-router-dom"
 import "./ComplaintForm.css"
 import axios from "axios"
 import { useEffect, useState } from "react"
+import Header from "../Header/Header";
+import Footer from "../footer/footer";
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function ComplaintForm(){
+    const navigate = useNavigate();
+
     const [ComplaintImage, setComplaintImage] = useState();
     const [ComplaintCategory,setComplaintCategory]=useState("")
     const [ComplaintName,setComplaintName] = useState("")
@@ -26,18 +32,24 @@ export default function ComplaintForm(){
         formData.append('ComplaintDes', ComplaintDes);
 
         try{
-            const response = await axios.post("http://127.0.0.1:8000/api/complaints/",formData, {
+            const response = await axios.post("http://127.0.0.1:8000/api/complaint/gayathrigaya698@gmail.com/",formData,{
                 headers: {
                   'Content-Type': 'multipart/form-data'
                 }
               })
-            console.log(response.data)
+            if (response.data["hi"] === "success"){
+                navigate("/People")
+            }
+
+
          
         }catch(error){
             console.log(error)
         }
     }
     return(
+        <>
+        <Header/>
         <div id="complaint-form-main">
             <FormBody 
             setComplaintCategory={setComplaintCategory}
@@ -51,6 +63,9 @@ export default function ComplaintForm(){
             />
           
         </div>
+        {/* <Footer/> */}
+        </>
+
     )
 }
 function FormHeading(){

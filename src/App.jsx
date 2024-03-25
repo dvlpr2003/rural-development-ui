@@ -11,15 +11,19 @@ import Complaints from './complaints/Complaints'
 import ComplaintForm from './complaints/ComplaintForm'
 
 function App() {
+  const [Username,setUsername]=useState("")
+
 
   return (
     <>
     <BrowserRouter>
     <Routes>
-      <Route path="/" Component={Home}/>
-      <Route exact path='/Login' Component={Login}/>
-      <Route path='/signup' Component={SignUp}/>
-      <Route path='/People' Component={Complaints}/>
+      <Route path="/" element={<Home/>}/>
+      <Route exact path='/Login' element={<Login Username={Username} setUsername={setUsername}/>}/>
+      <Route path='/signup' element={<SignUp/>}/>
+      <Route path='/People' element={<Complaints/>}/>
+      <Route path='/Complaint-form' element={<ComplaintForm/>}/>
+
     </Routes>
     </BrowserRouter>
     {/* <OfficerPage/> */}

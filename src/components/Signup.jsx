@@ -2,10 +2,14 @@ import "./Signup.css"
 import Header from "../Header/Header"
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { useNavigate } from 'react-router-dom';
+
 const delay = ms => new Promise(
     resolve => setTimeout(resolve, ms)
   );
 export default function SignUp(){
+    const navigate = useNavigate();
+
     const [Fname,setFname]=useState("")
     const [Lname,setLname]=useState("")
     const [eMail,seteMail] = useState("")
@@ -62,7 +66,10 @@ export default function SignUp(){
 
         try{
             const response = await axios.get(`http://127.0.0.1:8000/api/email/${eMail}/otp/${OTP}/`)
-            if(response["data"][0] === "Success") setisVerify(false);
+            if(response["data"][0] === "Success"){
+                setisVerify(false)
+                navigate("/Login")
+            };
         }catch(error){
             console.log("error",error)
 

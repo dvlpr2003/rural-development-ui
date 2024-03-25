@@ -1,3 +1,4 @@
+import Header from "../Header/Header"
 import Home from "../Home/Home"
 import Footer from "../footer/footer"
 
@@ -7,6 +8,7 @@ import "./Complaints.css"
 export default function Complaints(){
     return(
         <>
+        <Header/>
         <div id="complaint-main">
             <ComplaintHeading/>
         </div>
@@ -19,7 +21,7 @@ export default function Complaints(){
 function ComplaintHeading(){
     return(
         <div id="complaint-1">
-            <div id="complaint-heading">
+            <div id="complaint-headings">
                 <h1>Empowering Communities, Enriching Lives</h1>
                 <h1 id="jldoid">The Tamil Nadu Rural Development Revolution</h1>
             </div>

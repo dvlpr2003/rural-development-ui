@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const delay = ms => new Promise(
   resolve => setTimeout(resolve, ms)
 );
-function Login(){
-  const [Username,setUsername]=useState("")
+function Login({Username,setUsername}){
+  // const [Username,setUsername]=useState("")
   const [password,setPassword] = useState("")
   const [isLoading,setisLoading]=useState(false)
   const [uEmpty,setuEmpty]=useState(false)
