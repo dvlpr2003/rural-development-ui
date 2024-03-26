@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
 import "./officer.css"
 import axios from "axios"
-export default function OfficerOption(){
+export default function OfficerPage(){
     const [totalUser,settotalUser]=useState()
     const [totalComplaint,settotalComplaint]=useState()
+    const [UserList,setUserList]=useState()
+    const [OverData,setOverData]=useState()
     useEffect(function(){
         async function GetTotal(){
             try{
@@ -28,6 +30,30 @@ export default function OfficerOption(){
         }
         GetTotalComplaints()
     },[])
+    useEffect(function(){
+    async function GetUser(){
+        try{
+            const response = await axios.get("http://127.0.0.1:8000/api/signup/")
+            console.log(response.data)
+            setUserList(response.data)
+        }catch(error){
+            console.log(error)
+        }
+    }
+    GetUser()
+},[])
+    
+    return(
+        <div id="officer-main-page">
+        <OfficerOption totalComplaint={totalComplaint} totalUser={totalUser} />
+        <QueryPage UserList={UserList} setOverData={setOverData}/>
+        <UserOverview OverData={OverData}/>
+
+        </div>
+    )
+}
+function OfficerOption({totalComplaint,totalUser}){
+
     return(
         <div id="officer-options">
             <OfficerItems totalUser={totalUser} totalComplaint={totalComplaint}/>
@@ -78,28 +104,53 @@ function OfficerItems({totalUser,totalComplaint}){
 
 
 
-function QueryPage(){
+function QueryPage({UserList,setOverData}){
     return(
         <div id="officer-Query-page">
-            <RegisteredUser/>
+            {
+            
+            UserList && <RegisteredUser UserList={UserList} setOverData={setOverData}/>
+            }
 
         </div>
     )
 }
 
-function RegisteredUser(){
+function RegisteredUser({UserList,setOverData}){
     return(
         <div id="Registered-user-main">
-            {/* {
-                data.map((e)=><RegisteredUserItems />)
-            } */}
-
+            {
+                UserList.map((e)=><RegisteredUserItems 
+                fname={e.fname}
+                 lname={e.lname} 
+                 address={e.address} 
+                 district = {e.district}
+                  mail = {e.mail} 
+                  phone = {e.phone} 
+                  pincode = {e.pincode}
+                  setOverData={setOverData}
+                  />)
+            }
         </div>
     )
 }
-function RegisteredUserItems(){
+function RegisteredUserItems({fname,lname,address,district,mail,phone,pincode,setOverData}){
+    function updatelist(){
+        setOverData()
+        let data = {
+            fname:fname,
+            lname:lname,
+            address:address,
+            district:district,
+            mail:mail,
+            phone:phone,
+            pincode:pincode
+        }
+
+        setOverData(data)
+    }
     return(
-        <div className="Registered-user-items">
+        <div className="Registered-user-items" onClick={updatelist}>
             <div className="user-profile-svg">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#8e8eee" className="user-dvd">
   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -108,7 +159,7 @@ function RegisteredUserItems(){
             </div>
             <div className="user-profile-content">
                 <div className="user-profile-name">
-                    <span>Raja</span><span>K</span>
+                    <span>{fname}</span><span>{lname}</span>
                 </div>
                 <div className="user-profile-complaint">
                     <div className="complaint-svg">
@@ -127,15 +178,17 @@ function RegisteredUserItems(){
 
 
 
-function UserOverview(){
+function UserOverview({OverData}){
     return(
         <div id="User-overview-main">
-            <UserOverviewItems/>
+            {
+             OverData && <UserOverviewItems OverData={OverData}/>
+            }
         </div>
     )
 }
 
-function UserOverviewItems(){
+function UserOverviewItems({OverData}){
     return(
         <div id="user-overview-items">
             <div id="user-overview-items-svg">
@@ -145,7 +198,7 @@ function UserOverviewItems(){
 
             </div>
             <div id="user-overview-name">
-                <span>RAJA K</span>
+                <span>{OverData.fname} {OverData.lname}</span>
             </div>
             <div id="user-overview-contacts">
                 <div id="user-mail">
@@ -155,7 +208,7 @@ function UserOverviewItems(){
 </svg>
 
                     </div>
-                    <span>gayathrigaya698@gmail.com</span>
+                    <span>{OverData.mail}</span>
                 </div>
                 <div id="user-phone">
                     <div id="user-phone-svg">
@@ -164,7 +217,7 @@ function UserOverviewItems(){
 </svg>
 
                     </div>
-                    <span>8220902938</span>
+                    <span>{OverData.phone}</span>
                 </div>
                 <div id="user-address">
                     <div id="user-gps-svg">
@@ -175,7 +228,7 @@ function UserOverviewItems(){
 
                     </div>
                     <div>
-                        <span>Thirumalaikeni,</span> <span>Dindigul-</span> <span>624306</span>
+                        <span>{OverData.address},</span> <span>{OverData.district}-</span> <span>{OverData.pincode}</span>
                     </div>
 
                 </div>
