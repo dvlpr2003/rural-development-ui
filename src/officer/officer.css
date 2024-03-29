@@ -3,16 +3,17 @@
     display: flex;
 }
 #officer-options{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 20rem;
 }
 #officer-Query-page{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-left: none;
     width: 45rem;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    background-color: #bcbcce;
     
     
 }
@@ -59,7 +60,8 @@
     display: none;
   }
 .Registered-user-items{
-    border: 1px solid rgb(220, 218, 218);
+    border: 1px solid rgb(254, 254, 254);
+    background-color: white;
     border-radius: 20px;
     /* width: 95vh; */
     width: 20rem;
@@ -209,4 +211,50 @@
     margin-top: 0.2rem;
     display: flex;
     gap: 0.5rem;
+}
+.Complaint-Details-overview-point{
+    border: 1px solid white;
+    width: 35rem;
+    height: 12rem;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Complaint-Details-overview-point div {
+    /* border: 1px solid red; */
+
+}
+.complaint-details-content{
+    width: 25rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap:1.5rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    overflow-y: hidden;
+}
+.complaint-details-content h1{
+    font-family: "Candal", sans-serif;
+    
+}
+.complaint-details-content span {
+    color: #a7a5a5;
+    font-size: 0.9rem;
+    font-family: "Assistant", sans-serif;
+    
+
+}
+.complaint-details-content-image{
+    margin-right: 1.5rem;
+}
+.complaint-details-content-image img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 20px;
 }
