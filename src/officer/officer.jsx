@@ -6,11 +6,15 @@ export default function OfficerPage(){
     const [totalComplaint,settotalComplaint]=useState()
     const [UserList,setUserList]=useState()
     const [OverData,setOverData]=useState()
+    const [isComplaint,setisComplaint]=useState(false)
+    const [isRegUser,setisRegUser]=useState(true)
+    const [ComplaintFt,setisComplaintFt]=useState()
+    const [Userft,setUserft]=useState()
+    const [UserftList,setUserftList]=useState()
     useEffect(function(){
         async function GetTotal(){
             try{
                 const response = await axios.get("http://127.0.0.1:8000/api/total_user/")
-                console.log(response.data)
                 settotalUser(response.data["total"])
             }catch(error){
                 console.log(error)
@@ -22,8 +26,8 @@ export default function OfficerPage(){
         async function GetTotalComplaints(){
             try{
                 const response = await axios.get("http://127.0.0.1:8000/api/total_complaint/")
-                console.log(response.data)
                 settotalComplaint(response.data["total"])
+
             }catch(error){
                 console.log(error)
             }
@@ -34,7 +38,6 @@ export default function OfficerPage(){
     async function GetUser(){
         try{
             const response = await axios.get("http://127.0.0.1:8000/api/signup/")
-            console.log(response.data)
             setUserList(response.data)
         }catch(error){
             console.log(error)
@@ -43,35 +46,67 @@ export default function OfficerPage(){
     GetUser()
 },[])
 async function GetComplaintData(){
+    setisRegUser(false)
+    setisComplaint(true)
     try{
         const response = await axios.get("http://127.0.0.1:8000/api/complaints/");
-        console.log(response.data)
+        setisComplaintFt(response.data)
     }catch(error){
         console.log(error)
     }
 }
+useEffect(function(){
+    async function Fun(){
+        setOverData()
+        let data = {
+                    fname:UserftList.fname,
+                    lname:UserftList.lname,
+                    address:UserftList.address,
+                    district:UserftList.district,
+                    mail:UserftList.mail,
+                    phone:UserftList.phone,
+                    pincode:UserftList.pincode
+                }
+        setOverData(data)
+    }
+    Fun()
+},[UserftList])
+useEffect(function(){
+    async function GetuserDetailsFt(){
+        try{
+            const response = await axios.get(`http://127.0.0.1:8000/api/get_user/${Userft}/`);
+            setUserftList(response.data)
+        }catch(error){
+            console.log(error)
+        }
+    }
+    GetuserDetailsFt()
+},[Userft])
     
     return(
         <div id="officer-main-page">
-        <OfficerOption totalComplaint={totalComplaint} totalUser={totalUser} GetComplaintData={GetComplaintData} />
-        <QueryPage UserList={UserList} setOverData={setOverData}/>
+        <OfficerOption totalComplaint={totalComplaint} totalUser={totalUser} GetComplaintData={GetComplaintData} setisRegUser={setisRegUser} setisComplaint={setisComplaint}/>
+        <QueryPage UserList={UserList} setOverData={setOverData} isComplaint={isComplaint} isRegUser={isRegUser} ComplaintFt={ComplaintFt} setUserft={setUserft}/>
         <UserOverview OverData={OverData}/>
 
         </div>
     )
 }
-function OfficerOption({totalComplaint,totalUser,GetComplaintData}){
+function OfficerOption({totalComplaint,totalUser,GetComplaintData,setisRegUser,setisComplaint}){
 
     return(
         <div id="officer-options">
-            <OfficerItems totalUser={totalUser} totalComplaint={totalComplaint} GetComplaintData={GetComplaintData}/>
+            <OfficerItems totalUser={totalUser} totalComplaint={totalComplaint} GetComplaintData={GetComplaintData} setisRegUser={setisRegUser} setisComplaint={setisComplaint}/>
         </div>
     )
 }
-function OfficerItems({totalUser,totalComplaint,GetComplaintData}){
+function OfficerItems({totalUser,totalComplaint,GetComplaintData,setisRegUser,setisComplaint}){
     return(
         <div id="officer-item-container">
-            <div className="officer-item-container-options">
+            <div className="officer-item-container-options" onClick={()=>{
+                setisRegUser(true)
+                setisComplaint(false)
+            }}>
                 <div className="officer-svg">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"  className="officer-user-svg">
   <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -112,14 +147,14 @@ function OfficerItems({totalUser,totalComplaint,GetComplaintData}){
 
 
 
-function QueryPage({UserList,setOverData}){
+function QueryPage({UserList,setOverData,isComplaint,isRegUser,ComplaintFt,setUserft}){
     return(
         <div id="officer-Query-page">
-            {/* {
+            {
             
-            <RegisteredUser UserList={UserList} setOverData={setOverData}/>
-            } */}
-            <ComplaintsDetails/>
+            isRegUser&&<RegisteredUser UserList={UserList} setOverData={setOverData}/>
+            }
+            {isComplaint&&<ComplaintsDetails ComplaintFt={ComplaintFt} setOverData={setOverData} setUserft={setUserft}/>}
 
 
         </div>
@@ -144,27 +179,32 @@ function RegisteredUser({UserList,setOverData}){
         </div>
     )
 }
-function ComplaintsDetails(){
+function ComplaintsDetails({ComplaintFt,setOverData,setUserft}){
     return(
-        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"2rem"}}>
-            <ComplaintDetailsItems/>
-            <ComplaintDetailsItems/>
+        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"2rem",marginTop:"2rem",marginBottom:"2rem"}} >
+            {
+                ComplaintFt&&ComplaintFt.map((e)=><ComplaintDetailsItems ComplaintName={e.ComplaintName} ComplaintImage={e.ComplaintImage} 
+                ComplaintDes={e.ComplaintDes} user={e.user} setOverData={setOverData} setUserft={setUserft}
+                 />)
+            }
         </div>
     )
 }
 
-function ComplaintDetailsItems(){
+function ComplaintDetailsItems({ComplaintName,ComplaintImage,ComplaintDes,user,setOverData,setUserft}){
+
     return(
-        <div className="Complaint-Details-overview-point">
+        <div className="Complaint-Details-overview-point" onClick={()=>{ setUserft(user)
+        }}>
             <div className="complaint-details-content">
-                <h2>myComplaints heading</h2>
+                <h2>{ComplaintName}</h2>
                 
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, totam laboriosam optio est quaerat vel eius tempore doloribus! Nisi et earum nobis excepturi saepe enim dolores architecto, quas nihil deleniti.
+                    <span>{ComplaintDes}
                     </span>
                 
             </div>
             <div className="complaint-details-content-image">
-                <img src="img/kid_login.jpeg"/>
+                <img src={ComplaintImage}/>
 
             </div>
             
