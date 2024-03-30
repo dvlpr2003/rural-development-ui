@@ -257,3 +257,23 @@
     height: 8rem;
     border-radius: 20px;
 }
+#final-overview-items{
+    position: relative;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    width: 38rem;
+    height: 46rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* flex-wrap: wrap; */
+    overflow-y: scroll;
+}
+#final-btn{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}

@@ -11,6 +11,7 @@ export default function OfficerPage(){
     const [ComplaintFt,setisComplaintFt]=useState()
     const [Userft,setUserft]=useState()
     const [UserftList,setUserftList]=useState()
+    const [isFinal,setisFinal]=useState(false)
     useEffect(function(){
         async function GetTotal(){
             try{
@@ -86,7 +87,7 @@ useEffect(function(){
     return(
         <div id="officer-main-page">
         <OfficerOption totalComplaint={totalComplaint} totalUser={totalUser} GetComplaintData={GetComplaintData} setisRegUser={setisRegUser} setisComplaint={setisComplaint}/>
-        <QueryPage UserList={UserList} setOverData={setOverData} isComplaint={isComplaint} isRegUser={isRegUser} ComplaintFt={ComplaintFt} setUserft={setUserft}/>
+        <QueryPage UserList={UserList} setOverData={setOverData} isComplaint={isComplaint} isRegUser={isRegUser} ComplaintFt={ComplaintFt} setUserft={setUserft} isFinal={isFinal} setisFinal={setisFinal} setisComplaint={setisComplaint}/>
         <UserOverview OverData={OverData}/>
 
         </div>
@@ -147,15 +148,59 @@ function OfficerItems({totalUser,totalComplaint,GetComplaintData,setisRegUser,se
 
 
 
-function QueryPage({UserList,setOverData,isComplaint,isRegUser,ComplaintFt,setUserft}){
+function QueryPage({UserList,setOverData,isComplaint,isRegUser,ComplaintFt,setUserft,isFinal,setisFinal,setisComplaint}){
     return(
         <div id="officer-Query-page">
             {
             
             isRegUser&&<RegisteredUser UserList={UserList} setOverData={setOverData}/>
             }
-            {isComplaint&&<ComplaintsDetails ComplaintFt={ComplaintFt} setOverData={setOverData} setUserft={setUserft}/>}
+            {isComplaint&&<ComplaintsDetails ComplaintFt={ComplaintFt} setOverData={setOverData} setUserft={setUserft} setisFinal={setisFinal} setisComplaint={setisComplaint}/>}
+            {isFinal&&<FinalOverview setisFinal={setisFinal}setisComplaint={setisComplaint}/>}
 
+
+        </div>
+    )
+}
+
+function FinalOverview({setisComplaint,setisFinal}){
+    return(
+        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",marginTop:"2rem",marginBottom:"2rem"}}>
+            <FinalOverviewItems setisComplaint={setisComplaint} setisFinal={setisFinal}/>
+
+        </div>
+    )
+}
+function FinalOverviewItems({setisComplaint,setisFinal}){
+    return(
+        <div id="final-overview-items">
+            <h2>Water Complaint</h2>
+            <img src="img/kid_login.jpeg" style={{width:"15rem",height:"15rem",borderRadius:"20px",marginTop:"3rem"}}/>
+            <span style={{fontSize:"0.8rem",color:"#a7a5a5",marginRight:"1rem",marginLeft:"1rem",textAlign:"justify",fontFamily:"Assistant",marginTop:"2rem"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt natus deserunt laudantium dicta ea in voluptatum, aut assumenda quos aspernatur doloremque. Libero, necessitatibus laboriosam. Placeat, cum recusandae? Fugiat, quasi unde!
+            Adipisci dolorum placeat necessitatibus enim commodi optio vitae voluptas. Magnam assumenda molestias, quod totam debitis deleniti repudiandae laborum modi ipsa necessitatibus nostrum reiciendis ea quam nisi ratione accusantium, corrupti nihil!
+            Suscipit officia possimus, ratione fugiat voluptatem tempora. Enim at id ab culpa ipsa? Assumenda voluptates consequuntur voluptatibus totam similique, fuga architecto fugit ratione beatae ipsa aspernatur debitis iure nemo voluptatem.
+            Alias, id laboriosam. Cupiditate nam ex cum magnam incidunt qui hic minus illum obcaecati! Non ad cum earum hic aut recusandae cumque, consequatur a doloribus laboriosam illum vitae minus deserunt.
+            Perferendis cumque harum modi porro molestias tempore eligendi, possimus quos non hic facilis consectetur, quis dolor, accusantium velit aperiam beatae cupiditate maxime distinctio libero nemo quia quasi. Porro, deleniti corrupti.</span>
+            <div style={{display:"flex",flexDirection:'column',justifyContent:"center",fontFamily:"Assistant",marginTop:"1rem",color:"#a7a5a5",fontSize:"0.9rem"}}>
+                <span>Location : Dindigul</span>
+                <span>District : Siluvathur</span>
+                <span>Pincode  : 624306</span>
+            </div>
+            <div style={{width:"35rem",display:'flex',marginTop:"1rem"}}>
+                <button style={{backgroundColor:"blue",border:"1px solid blue",marginLeft:"auto",alignSelf:"flex-end",width:"10rem"}}>Accept</button>
+            </div>
+            <div style={{position:"absolute",left:"1rem",top:"1rem"}}>
+                <div id="final-btn" onClick={()=>{
+                    setisFinal(false)
+                    setisComplaint(true)
+                }}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#a7a5a5" >
+  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+</svg>
+
+
+                </div>
+            </div>
 
         </div>
     )
@@ -179,22 +224,25 @@ function RegisteredUser({UserList,setOverData}){
         </div>
     )
 }
-function ComplaintsDetails({ComplaintFt,setOverData,setUserft}){
+function ComplaintsDetails({ComplaintFt,setOverData,setUserft,setisFinal,setisComplaint}){
     return(
         <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"2rem",marginTop:"2rem",marginBottom:"2rem"}} >
             {
                 ComplaintFt&&ComplaintFt.map((e)=><ComplaintDetailsItems ComplaintName={e.ComplaintName} ComplaintImage={e.ComplaintImage} 
-                ComplaintDes={e.ComplaintDes} user={e.user} setOverData={setOverData} setUserft={setUserft}
+                ComplaintDes={e.ComplaintDes} user={e.user} setOverData={setOverData} setUserft={setUserft} setisFinal={setisFinal}
+                setisComplaint={setisComplaint}
                  />)
             }
         </div>
     )
 }
 
-function ComplaintDetailsItems({ComplaintName,ComplaintImage,ComplaintDes,user,setOverData,setUserft}){
+function ComplaintDetailsItems({ComplaintName,ComplaintImage,ComplaintDes,user,setOverData,setUserft,setisFinal,setisComplaint}){
 
     return(
         <div className="Complaint-Details-overview-point" onClick={()=>{ setUserft(user)
+            setisFinal(true)
+            setisComplaint(false)
         }}>
             <div className="complaint-details-content">
                 <h2>{ComplaintName}</h2>
