@@ -1,5 +1,5 @@
 #login {
-    border: 1px solid rgb(203, 202, 202);
+    border: 1px solid rgb(255, 255, 255);
     height: 27rem;
     width: 30rem;
     display: flex;
@@ -9,9 +9,10 @@
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    background-color: white
+    background-color: rgb(255, 255, 255)
 }
 #login-container{
+    background-color: #efeff9;
     height: 45rem;
     display: flex;
     justify-content: center;

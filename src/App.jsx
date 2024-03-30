@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-    {/* <BrowserRouter>
+    <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home isLogin={isLogin}/>}/>
       <Route exact path='/Login' element={<Login Username={Username} setUsername={setUsername} setisLogin={setisLogin} isLogin={isLogin}/>}/>
@@ -27,8 +27,8 @@ function App() {
       <Route path='/Complaint-form' element={<ComplaintForm isLogin={isLogin}/>}/>
 
     </Routes>
-    </BrowserRouter> */}
-    <OfficerPage/>
+    </BrowserRouter>
+    {/* <OfficerPage/> */}
     {/* <Complaints/> */}
     {/* <LoadingAnimation/> */}
     {/* <ComplaintForm/> */}
