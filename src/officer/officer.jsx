@@ -86,27 +86,28 @@ useEffect(function(){
     
     return(
         <div id="officer-main-page">
-        <OfficerOption totalComplaint={totalComplaint} totalUser={totalUser} GetComplaintData={GetComplaintData} setisRegUser={setisRegUser} setisComplaint={setisComplaint}/>
+        <OfficerOption totalComplaint={totalComplaint} totalUser={totalUser} GetComplaintData={GetComplaintData} setisRegUser={setisRegUser} setisComplaint={setisComplaint} setisFinal={setisFinal}/>
         <QueryPage UserList={UserList} setOverData={setOverData} isComplaint={isComplaint} isRegUser={isRegUser} ComplaintFt={ComplaintFt} setUserft={setUserft} isFinal={isFinal} setisFinal={setisFinal} setisComplaint={setisComplaint}/>
         <UserOverview OverData={OverData}/>
 
         </div>
     )
 }
-function OfficerOption({totalComplaint,totalUser,GetComplaintData,setisRegUser,setisComplaint}){
+function OfficerOption({totalComplaint,totalUser,GetComplaintData,setisRegUser,setisComplaint,setisFinal}){
 
     return(
         <div id="officer-options">
-            <OfficerItems totalUser={totalUser} totalComplaint={totalComplaint} GetComplaintData={GetComplaintData} setisRegUser={setisRegUser} setisComplaint={setisComplaint}/>
+            <OfficerItems totalUser={totalUser} totalComplaint={totalComplaint} GetComplaintData={GetComplaintData} setisRegUser={setisRegUser} setisComplaint={setisComplaint} setisFinal={setisFinal}/>
         </div>
     )
 }
-function OfficerItems({totalUser,totalComplaint,GetComplaintData,setisRegUser,setisComplaint}){
+function OfficerItems({totalUser,totalComplaint,GetComplaintData,setisRegUser,setisComplaint,setisFinal}){
     return(
         <div id="officer-item-container">
             <div className="officer-item-container-options" onClick={()=>{
                 setisRegUser(true)
                 setisComplaint(false)
+                setisFinal(false)
             }}>
                 <div className="officer-svg">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"  className="officer-user-svg">
