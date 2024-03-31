@@ -20,7 +20,7 @@ export default function Home({isLogin}){
 }
 function HeadingContainer({isLogin}){
     return(
-        <div id="heading-container">
+        <div id="heading-container" >
             <Heading isLogin={isLogin}/>
             <HeadingImage/>
             
@@ -30,7 +30,7 @@ function HeadingContainer({isLogin}){
 }
 function Heading({isLogin}){
     return(
-        <div className="H-containers" id="heading">
+        <div className="H-containers" id="heading" style={{marginLeft:"3em"}}>
             <div className="heading-text-container">
             <h1>Empowering Tamil Nadu's Heartland: </h1>
 
