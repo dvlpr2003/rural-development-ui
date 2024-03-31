@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import "./Container3.css"
 
 export default function AgriculturalDevelopment(){
@@ -39,7 +40,7 @@ function Container3Para(){
             <span>strategic interventions, agricultural development initiatives aim to enhance productivity, improve livelihoods, and ensure food </span>
             <span>security for rural communities. Join us as we delve into the multifaceted realm of agricultural development, where the seeds of</span>
             <span>progress sow the promise of a sustainable and thriving future for Tamil Nadu's agrarian heartland.</span>
-            <span>Learn more...</span>
+            <NavLink to="/Agriculture-and-Development"><span>Learn more...</span></NavLink>
         </div>
     )
 }

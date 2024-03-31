@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import "./Container.css"
 export default function InfrastructureDevelopment(){
     return(
@@ -19,7 +20,7 @@ export default function InfrastructureDevelopment(){
                     <span>
                     Constructing and maintaining roads, highways, and bridges to enhance connectivity between villages, towns, and urban centers. This includes all-weather roads, rural access roads, and transport facilities to improve accessibility for residents and facilitate the movement of goods and services
                     </span>
-                    <span>Learn more</span>
+                    <NavLink to="/Roads-and-Transport"><span>Learn more</span></NavLink>
 
                 </div>
                 
@@ -30,7 +31,7 @@ export default function InfrastructureDevelopment(){
                     <span>
                     Extending electricity infrastructure to rural areas to provide reliable access to electricity for households, businesses, and agricultural activities. This includes electrification projects, distribution networks, and promoting renewable energy sources like solar power.
                     </span>
-                    <span>Learn more</span>
+                    <NavLink to="/Electricity-and-Power"><span>Learn more</span></NavLink>
 
 
                 </div>
@@ -52,7 +53,7 @@ export default function InfrastructureDevelopment(){
                     <span>
                     Developing water supply systems, including piped water networks, hand pumps, and borewells, to ensure access to clean and safe drinking water in rural communities. Sanitation infrastructure such as toilets, sewage systems, and waste management facilities are also crucial for public health and hygiene.
                     </span>
-                    <span>Learn more</span>
+                    <NavLink to="/Water-Supply-and-Sanitation"><span>Learn more</span></NavLink>
                 </div>
                 
             </div>

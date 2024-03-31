@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import "./container4.css"
 
 
@@ -39,9 +40,10 @@ function EduCo2(){
                 <span>
                     various aspects such as infrastructure, curriculum, teaching methods, teacher training, equity, access, and governance
                 </span>
-                <button>
+                <NavLink to="/Education-Development"><button>
                     View More
                 </button>
+                </NavLink>
             </div>
             <div id="Education-system-elements">
                 <div className="Education-system-elements-items">

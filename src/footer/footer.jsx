@@ -29,12 +29,12 @@ export default function Footer(){
                 <div id="footer-service-item-elements">
                     <span className="element-heading">Infrastructure Development</span>
                     <div id="info-sub-items">
-                        <span>Roads and Transportation</span>
-                        <span>Electricity and Power</span>
-                        <span>Water Supply and Sanitation</span>
+                        <NavLink to="/Roads-and-Transport"><span>Roads and Transportation</span></NavLink>
+                        <NavLink to="/Electricity-and-Power"><span>Electricity and Power</span></NavLink>
+                        <NavLink to="/Water-Supply-and-Sanitation"><span>Water Supply and Sanitation</span></NavLink>
                     </div>
-                    <span className="element-heading">Agriculture Development</span>
-                    <span className="element-heading">Education Development</span>
+                    <NavLink to="/Agriculture-and-Development"><span className="element-heading">Agriculture Development</span></NavLink>
+                    <NavLink to="/Education-Development"><span className="element-heading">Education Development</span></NavLink>
 
 
                 </div>
@@ -51,7 +51,7 @@ export default function Footer(){
                 </div>
             </div>
             <div id="officer-and-aboutus">
-            <NavLink><span>Officer Login</span></NavLink>
+            <NavLink to="/officer-login"><span>Officer Login</span></NavLink>
             <NavLink><span>About us</span></NavLink>
             </div>
 

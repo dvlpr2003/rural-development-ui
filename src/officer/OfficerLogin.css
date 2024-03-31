@@ -1,0 +1,25 @@
+#officer-login-items-controller{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 30rem;
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    
+}
+#officer-login-items-controller div label{
+    font-family: "Assistant", sans-serif;
+
+}
+#officer-login-items-controller div input {
+    margin-top: 0.5rem;
+    width: 18.7rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 1rem;
+    font-family: "Assistant", sans-serif;
+
+}

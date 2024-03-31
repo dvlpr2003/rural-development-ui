@@ -28,7 +28,7 @@ export default function Header({isLogin}){
                 <NavLink to="/"><span>Home</span></NavLink >
                 <span>About Us</span>
                 <span onClick={lrt} style={{cursor:"pointer"}}>Our services</span>
-                <span>Officer login</span>
+                <NavLink to='/officer-login'><span>Officer login</span></NavLink>
             </div>
             <div id='Header-Login-Signup'>
                 { !isLogin?
@@ -65,18 +65,18 @@ function ServiceOption({lrt1}){
 </svg>
 </span>
             </div>
-            <div><span>Agriculture Development</span></div>
-            <div><span>Education Development</span></div>
+            <div><NavLink to="/Agriculture-and-Development"><span>Agriculture Development</span></NavLink></div>
+            <div><NavLink to="/Education-Development"><span>Education Development</span></NavLink></div>
         </div>
         </>
     )
 }
 function InfrastructureDevelopmentOptions(){
     return(
-        <div id='info-dev-options'>
-            <span>Roads and Transportation</span>
-            <span>Electricity and Power</span>
-            <span>Water Supply and Sanitation</span>
+        <div id='info-dev-options' style={{backgroundColor:"white"}}>
+            <NavLink to="/Roads-and-Transport"><span>Roads and Transportation</span></NavLink>
+            <NavLink to="/Electricity-and-Power"><span>Electricity and Power</span></NavLink>
+            <NavLink to="/Water-Supply-and-Sanitation"><span>Water Supply and Sanitation</span></NavLink>
         </div>
     )
 }
