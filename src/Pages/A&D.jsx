@@ -2,10 +2,10 @@ import Header from "../Header/Header"
 import Footer from "../footer/footer"
 import "./pages.css"
 
-export default function AgricultureandDevelopment(){
+export default function AgricultureandDevelopment({isLogin,setisLogin}){
     return(
         <>
-        <Header/>
+        <Header isLogin={isLogin} setisLogin={setisLogin}/>
         <div className="pages-main">
             
             <RTElements1/>
