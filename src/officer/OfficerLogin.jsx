@@ -3,7 +3,7 @@ import "./OfficerLogin.css"
 
 import axios from '/node_modules/axios';
 
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const delay = ms => new Promise(
     resolve => setTimeout(resolve, ms)
@@ -48,6 +48,7 @@ export default function OfficerLogin(){
     }
     return(
         <div style={{display:"flex",justifyContent:"center",alignItems:"center",border:"1px solid black",height:"100vh",backgroundColor:"#efeff9",position:"relative"}}>
+            <BackTOhome/>
             <OfficerLoginItems setOfficerPassword={setOfficerPassword} setOfficerUserName={setOfficerUserName} lOGINofficer={lOGINofficer} uEmpty={uEmpty} pEmpty={pEmpty} EError={EError} PError={PError}/>
             {isLoading&&<LoadingAnimation/>}
 
@@ -84,3 +85,17 @@ function LoadingAnimation(){
       </div>
     );
   };
+
+
+  function BackTOhome(){
+    return(
+        <div style={{position:'absolute',bottom:"2rem",left:"1rem"}}>
+            <NavLink to="/" style={{display:"flex",width:"12rem",justifyContent:"center",alignItems:"center",gap:'1rem',fontFamily:"Assistant"}}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" id="back-to-home" style={{height:"2rem"}}>
+  <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+</svg>
+<span>Back to Home</span>
+</NavLink>
+        </div>
+    )
+  }
