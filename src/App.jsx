@@ -33,8 +33,8 @@ function App() {
       <Route path="/" element={<Home isLogin={isLogin} setisLogin={setisLogin}/>}/>
       <Route exact path='/Login' element={<Login Username={Username} setUsername={setUsername} setisLogin={setisLogin} isLogin={isLogin}/>}/>
       <Route path='/signup' element={<SignUp isLogin={isLogin}/>}/>
-      {isLogin&&<Route path='/People' element={<Complaints isLogin={isLogin} setisLogin={setisLogin}/>}/>}
-      <Route path='/Complaint-form' element={<ComplaintForm isLogin={isLogin} setisLogin={setisLogin}/>}/>
+      {isLogin&&<Route path='/People' element={<Complaints isLogin={isLogin} setisLogin={setisLogin} />}/>}
+      <Route path='/Complaint-form' element={<ComplaintForm isLogin={isLogin} setisLogin={setisLogin} Username={Username}/>}/>
       <Route path='/officer-login' element={<OfficerLogin/>}/>
       <Route path='/officer-Home' element={<OfficerPage/>}/>
       <Route path='/Education-Development' element={<EducationandDevelopment isLogin={isLogin} setisLogin={setisLogin}/>}/>

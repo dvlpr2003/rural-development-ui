@@ -1,7 +1,7 @@
 import Header from "../Header/Header"
 import Footer from "../footer/footer"
 import "./pages.css"
-
+import LabelContainer from "./Label"
 export default function WaterSupplyandSanitation({isLogin,setisLogin}){
     return(
         <>
@@ -85,6 +85,7 @@ function RTElements1(){
 function RTElements2(){
     return(
         <div className="pages-element-2">
+            <LabelContainer/>
 
         </div>
     )

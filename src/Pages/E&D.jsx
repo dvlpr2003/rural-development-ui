@@ -1,5 +1,6 @@
 import Header from "../Header/Header"
 import Footer from "../footer/footer"
+import LabelContainer from "./Label"
 import "./pages.css"
 
 export default function EducationandDevelopment({isLogin,setisLogin}){
@@ -88,7 +89,7 @@ function RTElements1(){
 function RTElements2(){
     return(
         <div className="pages-element-2">
-
+            <LabelContainer/>
         </div>
     )
 }

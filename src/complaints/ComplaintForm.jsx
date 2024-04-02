@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-export default function ComplaintForm({isLogin}){
+export default function ComplaintForm({isLogin,Username}){
     const navigate = useNavigate();
 
     const [ComplaintImage, setComplaintImage] = useState();
@@ -32,7 +32,7 @@ export default function ComplaintForm({isLogin}){
         formData.append('ComplaintDes', ComplaintDes);
 
         try{
-            const response = await axios.post("http://127.0.0.1:8000/api/complaint/gayathrigaya698@gmail.com/",formData,{
+            const response = await axios.post(`http://127.0.0.1:8000/api/complaint/${Username}/`,formData,{
                 headers: {
                   'Content-Type': 'multipart/form-data'
                 }

@@ -16,7 +16,14 @@
     
 }
 .pages-element-2{
-    border: 1px solid green;
+    /* border: 1px solid green; */
+    border-left: 1px solid #e7e7e7;
+    width: 25rem;
+    display: flex;
+    /* align-items: center;
+     */
+     justify-content: center;
+     
 }
 .page-container-1 {
     margin-right: 2rem;
@@ -38,4 +45,7 @@
     font-family: "Assistant", sans-serif;
     text-align: justify;
     
+}
+a:active{
+    color: #cecece;
 }
