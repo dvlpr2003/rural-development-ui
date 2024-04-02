@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import "./officer.css"
-import axios from "axios"
+
+import axios from '/node_modules/axios';
+
 export default function OfficerPage(){
     const [totalUser,settotalUser]=useState()
     const [totalComplaint,settotalComplaint]=useState()

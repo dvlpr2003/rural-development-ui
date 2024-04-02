@@ -1,7 +1,8 @@
 import "./Login.css"
 import Header from "../Header/Header"
 import { useState } from "react";
-import axios from "axios"
+import axios from '/node_modules/axios';
+
 import { NavLink } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 const delay = ms => new Promise(

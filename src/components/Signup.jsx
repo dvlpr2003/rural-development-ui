@@ -1,7 +1,9 @@
 import "./Signup.css"
 import Header from "../Header/Header"
 import { useEffect, useState } from "react"
-import axios from "axios"
+
+import axios from '/node_modules/axios';
+
 import { useNavigate } from 'react-router-dom';
 
 const delay = ms => new Promise(

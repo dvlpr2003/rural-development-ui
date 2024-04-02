@@ -1,6 +1,8 @@
 import { useState } from "react"
 import "./OfficerLogin.css"
-import axios from "axios"
+
+import axios from '/node_modules/axios';
+
 import { useNavigate } from "react-router-dom";
 
 const delay = ms => new Promise(
