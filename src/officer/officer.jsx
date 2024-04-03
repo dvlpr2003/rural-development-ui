@@ -188,7 +188,7 @@ function FinalOverviewItems({setisComplaint,setisFinal,FinalData}){
                 <span>Pincode  : {FinalData.pincode}</span>
             </div>
             <div style={{width:"35rem",display:'flex',marginTop:"1rem"}}>
-                <button style={{backgroundColor:"blue",border:"1px solid blue",marginLeft:"auto",alignSelf:"flex-end",width:"10rem"}}>Accept</button>
+                <button style={{backgroundColor:"#4479f4",border:"1px solid #4479f4",marginLeft:"auto",alignSelf:"flex-end",width:"10rem",marginRight:"3rem"}}>Accept</button>
             </div>
             <div style={{position:"absolute",left:"1rem",top:"1rem"}}>
                 <div id="final-btn" onClick={()=>{
