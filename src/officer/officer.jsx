@@ -91,7 +91,7 @@ useEffect(function(){
     return(
         <div id="officer-main-page">
         <OfficerOption totalComplaint={totalComplaint} totalUser={totalUser} GetComplaintData={GetComplaintData} setisRegUser={setisRegUser} setisComplaint={setisComplaint} setisFinal={setisFinal}/>
-        <QueryPage UserList={UserList} setOverData={setOverData} isComplaint={isComplaint} isRegUser={isRegUser} ComplaintFt={ComplaintFt} setUserft={setUserft} isFinal={isFinal} setisFinal={setisFinal} setisComplaint={setisComplaint} setFinalData={setFinalData} FinalData={FinalData}/>
+        <QueryPage UserList={UserList} setOverData={setOverData} isComplaint={isComplaint} isRegUser={isRegUser} ComplaintFt={ComplaintFt} setUserft={setUserft} isFinal={isFinal} setisFinal={setisFinal} setisComplaint={setisComplaint} setFinalData={setFinalData} FinalData={FinalData} UserftList={UserftList}/>
         <UserOverview OverData={OverData}/>
 
         </div>
@@ -153,7 +153,7 @@ function OfficerItems({totalUser,totalComplaint,GetComplaintData,setisRegUser,se
 
 
 
-function QueryPage({UserList,setOverData,isComplaint,isRegUser,ComplaintFt,setUserft,isFinal,setisFinal,setisComplaint,setFinalData,FinalData}){
+function QueryPage({UserList,setOverData,isComplaint,isRegUser,ComplaintFt,setUserft,isFinal,setisFinal,setisComplaint,setFinalData,FinalData,UserftList}){
     return(
         <div id="officer-Query-page">
             {
@@ -161,22 +161,37 @@ function QueryPage({UserList,setOverData,isComplaint,isRegUser,ComplaintFt,setUs
             isRegUser&&<RegisteredUser UserList={UserList} setOverData={setOverData}/>
             }
             {isComplaint&&<ComplaintsDetails ComplaintFt={ComplaintFt} setOverData={setOverData} setUserft={setUserft} setisFinal={setisFinal} setisComplaint={setisComplaint} setFinalData={setFinalData}/>}
-            {isFinal&&<FinalOverview setisFinal={setisFinal}setisComplaint={setisComplaint} FinalData={FinalData}/>}
+            {isFinal&&<FinalOverview setisFinal={setisFinal}setisComplaint={setisComplaint} FinalData={FinalData} UserftList={UserftList} />}
 
 
         </div>
     )
 }
 
-function FinalOverview({setisComplaint,setisFinal,FinalData}){
+function FinalOverview({setisComplaint,setisFinal,FinalData,UserftList,ComplaintFt}){
     return(
         <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",marginTop:"2rem",marginBottom:"2rem"}}>
-            <FinalOverviewItems setisComplaint={setisComplaint} setisFinal={setisFinal} FinalData={FinalData}/>
+            <FinalOverviewItems setisComplaint={setisComplaint} setisFinal={setisFinal} FinalData={FinalData} UserftList={UserftList} />
 
         </div>
     )
 }
-function FinalOverviewItems({setisComplaint,setisFinal,FinalData}){
+function FinalOverviewItems({setisComplaint,setisFinal,FinalData,UserftList,}){
+    const [isAccept,setisAccept]=useState(false)
+    async function AcceptComplaint(){
+        try{
+            console.log(UserftList.mail)
+            const response = await axios.post(`http://127.0.0.1:8000/api/Complaint/${UserftList.mail}/Accept/${FinalData.id}/`)
+            console.log(response.data["status"])
+            if(response.data["status"] === "success"){
+                setisAccept(true)
+
+            }
+
+        }catch(error){
+            console.log(error)
+        }
+    }
     return(
         <div id="final-overview-items">
             <h2>{FinalData.name}</h2>
@@ -188,7 +203,7 @@ function FinalOverviewItems({setisComplaint,setisFinal,FinalData}){
                 <span>Pincode  : {FinalData.pincode}</span>
             </div>
             <div style={{width:"35rem",display:'flex',marginTop:"1rem"}}>
-                <button style={{backgroundColor:"#4479f4",border:"1px solid #4479f4",marginLeft:"auto",alignSelf:"flex-end",width:"10rem",marginRight:"3rem"}}>Accept</button>
+                <button onClick={AcceptComplaint}style={{backgroundColor:"#4479f4",border:"1px solid #4479f4",marginLeft:"auto",alignSelf:"flex-end",width:"10rem",marginRight:"3rem"}}>{isAccept?"Accepted":"Accept"}</button>
             </div>
             <div style={{position:"absolute",left:"1rem",top:"1rem"}}>
                 <div id="final-btn" onClick={()=>{
@@ -231,20 +246,21 @@ function ComplaintsDetails({ComplaintFt,setOverData,setUserft,setisFinal,setisCo
             {
                 ComplaintFt&&ComplaintFt.map((e)=><ComplaintDetailsItems ComplaintName={e.ComplaintName} ComplaintImage={e.ComplaintImage} ComplaintLocation={e.ComplaintLocation} ComplaintDistrict={e.ComplaintDistrict} ComplaintPincode={e.ComplaintPincode}
                 ComplaintDes={e.ComplaintDes} user={e.user} setOverData={setOverData} setUserft={setUserft} setisFinal={setisFinal}
-                setisComplaint={setisComplaint} setFinalData={setFinalData}
+                setisComplaint={setisComplaint} setFinalData={setFinalData} ComplaintId = {e.id}
                  />)
             }
         </div>
     )
 }
 
-function ComplaintDetailsItems({ComplaintName,ComplaintImage,ComplaintDes,ComplaintLocation,user,setOverData,setUserft,setisFinal,setisComplaint,ComplaintDistrict,ComplaintPincode,setFinalData}){
+function ComplaintDetailsItems({ComplaintName,ComplaintImage,ComplaintDes,ComplaintLocation,user,setOverData,setUserft,setisFinal,setisComplaint,ComplaintDistrict,ComplaintPincode,setFinalData,ComplaintId}){
 
     return(
         <div className="Complaint-Details-overview-point" onClick={()=>{ setUserft(user)
             setisFinal(true)
             setisComplaint(false)
             let f_data = {
+                id:ComplaintId ,
                 name:ComplaintName,
                 image:ComplaintImage,
                 description:ComplaintDes,
