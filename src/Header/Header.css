@@ -157,6 +157,33 @@
     height: 4rem;
     stroke: rgb(146, 169, 207);
 }
+@media (min-width: 340px) and (max-width: 450px){
+    #Header-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #Header-Login-Signup{
+        display: none;
+    }
+    #Header-Elements{
+        display: none;
+    }
+    #Header-Title span:first-child{
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: "Carter One", system-ui;
+    
+    }
+    #Header-Title span:last-child{
+        color: #317ef3;
+        font-weight: bold;
+        font-size: 3rem;
+        font-family: "Carter One", system-ui;
+    
+    }
+
+}
 @media (min-width: 450px) and (max-width: 570px){
     #Header-container{
         display: flex;
@@ -168,5 +195,18 @@
     }
     #Header-Elements{
         display: none;
+    }
+    #Header-Title span:first-child{
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: "Carter One", system-ui;
+    
+    }
+    #Header-Title span:last-child{
+        color: #317ef3;
+        font-weight: bold;
+        font-size: 3rem;
+        font-family: "Carter One", system-ui;
+    
     }
 }

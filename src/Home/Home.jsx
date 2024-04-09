@@ -36,10 +36,12 @@ function HeadingContainer({isLogin}){
 function Heading({isLogin}){
     return(
         <div className="H-containers" id="heading" >
-            <div className="heading-text-container">
-            <h1>Empowering Tamil Nadu's Heartland: </h1>
-
-            <h1>A Journey of <span style={{color:"#317ef3",fontSize:"2.3rem"}}>Rural Renaissance</span></h1>
+            <div className="heading-text-container" id="heading-text-container-id" >
+            <h1 className="empower">Empowering Tamil Nadu's Heartland: </h1>
+            <div id="defrty" >
+            <h1 className="empower">A Journey of</h1>
+            <h1>Rural Renaissance</h1>
+            </div>
             </div>
             <div className="heading-text-container" id="heading-para">
                 <p>

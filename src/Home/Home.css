@@ -29,9 +29,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
-.heading-text-container{
+#heading-text-container-id{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 38rem;
 }
 #heading{
@@ -39,6 +45,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     margin-left:3em;
 
 }
@@ -51,6 +58,7 @@
 #heading-para{
     display: flex;
     flex-direction: column ;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 #heading-para p{
@@ -65,6 +73,8 @@
     display: flex;
     /* justify-content: center; */
     align-items: center;
+    flex-wrap: wrap;
+
     gap: 4rem;
 }
 .Btn-items {
@@ -76,26 +86,50 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
     text-decoration: none;
     color: white;
     font-family: sans-serif;
 }
-
+#defrty{
+    /* width: 35rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+#defrty h1:last-child {
+    
+    color: #317ef3;
+    font-size: 2.5rem;
+    
+}
 
 
 
 /* media query for home contianer-1*/
 
 
-
-
-@media (min-width: 450px) and (max-width: 570px) {
+@media (min-width: 340px) and (max-width: 450px) {
     #home-heading-container-main{
         /* border: 1px solid blue; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+         flex-wrap: wrap;
+
+    }
+    .empower {
+        font-size: 3.5rem;
+    }
+    #defrty h1:last-child {
+    
+        color: #317ef3;
+        font-size: 3.3rem;
+        
     }
     #heading-container{
         /* border: 1px solid rgb(149, 34, 34); */
@@ -112,7 +146,7 @@
         display: none;
     }
     #heading{
-        width: 40rem;
+        width: 70rem;
         /* border: 1px solid black; */
         display: flex;
         flex-direction: column;
@@ -121,9 +155,9 @@
         flex-wrap: wrap;
         margin: 0;
     }
-    .heading-text-container{
+    #heading-text-container-id{
         /* border: 1px solid red; */
-        /* width: 40rem; */
+        width: 70rem;
     }
 
     .heading-text-container h1{
@@ -138,11 +172,100 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 0.3rem;
 
     }
     #Heading-buttons{
         align-items: center;
         justify-content: center;
+    }
+    #heading-para p {
+        font-size: 1.2rem;
+    }
+    .Btn-items{
+        width: 12rem;
+        height: 4rem;
+        font-size: 1.3rem;
+
+    }
+
+}
+
+@media (min-width: 450px) and (max-width: 570px) {
+    #home-heading-container-main{
+        /* border: 1px solid blue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+         flex-wrap: wrap;
+
+    }
+    .empower {
+        font-size: 3.5rem;
+    }
+    #defrty h1:last-child {
+    
+        color: #317ef3;
+        font-size: 3.3rem;
+        
+    }
+    #heading-container{
+        /* border: 1px solid rgb(149, 34, 34); */
+        /* height: auto; */
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    #slid-image-con{
+        display: none;
+    }
+    #heading{
+        width: 70rem;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    #heading-text-container-id{
+        /* border: 1px solid red; */
+        width: 70rem;
+    }
+
+    .heading-text-container h1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #heading-para{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+
+    }
+    #Heading-buttons{
+        align-items: center;
+        justify-content: center;
+    }
+    #heading-para p {
+        font-size: 1.2rem;
+    }
+    .Btn-items{
+        width: 12rem;
+        height: 4rem;
+        font-size: 1.3rem;
+
     }
 
 }
