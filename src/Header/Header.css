@@ -13,7 +13,7 @@
    
 }
 #Header-Title{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-left: 2rem;
     display: flex;
     gap: 0.3rem;
