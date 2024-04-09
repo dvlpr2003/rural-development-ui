@@ -8,29 +8,34 @@ import Education from "./container-4/container4"
 import Footer from "../footer/footer"
 export default function Home({isLogin}){
     return(
+        
         <>
+        <div style={{display:"flex",flexDirection:"column",justifyContent:'center',alignItems:'center'}}>
         <Header isLogin={isLogin}/>
         <HeadingContainer isLogin={isLogin}/>
         <InfrastructureDevelopment/>
         <AgriculturalDevelopment/>
         <Education/>
         <Footer/>
+        </div>
         </>
     )
 }
 function HeadingContainer({isLogin}){
     return(
+        <div id="home-heading-container-main">
         <div id="heading-container" >
             <Heading isLogin={isLogin}/>
             <HeadingImage/>
             
 
         </div>
+        </div>
     )
 }
 function Heading({isLogin}){
     return(
-        <div className="H-containers" id="heading" style={{marginLeft:"3em"}}>
+        <div className="H-containers" id="heading" >
             <div className="heading-text-container">
             <h1>Empowering Tamil Nadu's Heartland: </h1>
 
@@ -63,7 +68,7 @@ function Heading({isLogin}){
 }
 function HeadingImage(){
     return(
-        <div className="H-containers">
+        <div className="H-containers" id="slid-image-con">
             <Slideshow/>
         </div>
     )
