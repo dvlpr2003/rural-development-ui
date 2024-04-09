@@ -1,6 +1,7 @@
 #info-container-main{
+    width: 100%;
     position: relative;
-    height: 104vh;
+    height: 55rem;
     background-color: #f3f9ff;
 }
 #info-container-main h1{

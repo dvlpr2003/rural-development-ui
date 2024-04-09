@@ -7,3 +7,8 @@ button {
 a{
   color: black;
 }
+html {
+  width: 100vw;
+
+  zoom: 0;
+}
