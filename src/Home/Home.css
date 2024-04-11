@@ -37,8 +37,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     width: 38rem;
 }
 #heading{
@@ -97,8 +97,8 @@
     /* width: 35rem; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     gap: 1.5rem;
 }
 #defrty h1:last-child {
@@ -122,6 +122,14 @@
         align-items: center;
          flex-wrap: wrap;
 
+    }
+    #defrty{
+        /* width: 35rem; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
     }
     .empower {
         font-size: 3.5rem;
@@ -205,6 +213,14 @@
     .empower {
         font-size: 3.5rem;
     }
+    #defrty{
+        /* width: 35rem; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
     #defrty h1:last-child {
     
         color: #317ef3;
@@ -271,4 +287,291 @@
 
 }
 
+@media (min-width: 570px) and (max-width: 700px) {
+    #home-heading-container-main{
+        /* border: 1px solid blue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+         flex-wrap: wrap;
 
+    }
+    #defrty{
+        /* width: 35rem; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .empower {
+        font-size: 3.4rem;
+    }
+    #defrty h1:last-child {
+    
+        color: #317ef3;
+        font-size: 3.4rem;
+        
+    }
+    #heading-container{
+        /* border: 1px solid rgb(149, 34, 34); */
+        /* height: auto; */
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    #slid-image-con{
+        display: none;
+    }
+    #heading{
+        width: 70rem;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    #heading-text-container-id{
+        /* border: 1px solid red; */
+        width: 75rem;
+    }
+
+    .heading-text-container h1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #heading-para{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+
+    }
+    #Heading-buttons{
+        align-items: center;
+        justify-content: center;
+    }
+    #heading-para p {
+        font-size: 1.5rem;
+    }
+    .Btn-items{
+        width: 13rem;
+        height: 4.5rem;
+        font-size: 1.3rem;
+
+    }
+
+}
+@media (min-width: 700px) and (max-width: 900px){
+    #heading{
+        display: flex;
+        flex-direction: column;
+    }
+    #Heading-buttons{
+        width: 69.5rem;
+    }
+    #heading div {
+        /* margin-right: auto;
+        align-self: flex-start; */
+    }
+    .Btn-items{
+        width: 10rem;
+        height: 3rem;
+        font-size: 1.3rem;
+
+    }
+    #heading-text-container-id{
+        margin-right: auto;
+        align-self: flex-start;
+        width: 40rem;
+    }
+    .empower {
+        font-size: 2.2rem;
+    }
+    #defrty {
+        
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-wrap: wrap;
+        width: 70rem;
+    }
+    #defrty h1{
+        
+    }
+    #heading-para {
+        width: 70rem;
+    }
+    #heading-para p {
+        font-size: 1rem;
+    }
+    #defrty h1:last-child {
+
+        color: #317ef3;
+        font-size: 2.3rem;
+        
+    }
+
+}
+
+@media (min-width: 900px) and (max-width: 1200px){
+    #heading{
+        display: flex;
+        flex-direction: column;
+    }
+    #Heading-buttons{
+        width: 69.5rem;
+    }
+    #heading div {
+        /* margin-right: auto;
+        align-self: flex-start; */
+    }
+    .Btn-items{
+        width: 10rem;
+        height: 3rem;
+        font-size: 1.3rem;
+
+    }
+    #heading-text-container-id{
+        margin-right: auto;
+        align-self: flex-start;
+        width: 40rem;
+    }
+    .empower {
+        font-size: 2.2rem;
+    }
+    #defrty {
+        
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-wrap: wrap;
+        width: 70rem;
+    }
+    #defrty h1{
+        
+    }
+    #heading-para {
+        width: 70rem;
+    }
+    #heading-para p {
+        font-size: 1rem;
+    }
+    #defrty h1:last-child {
+
+        color: #317ef3;
+        font-size: 2.3rem;
+        
+    }
+
+}
+@media (min-width: 1200px) and (max-width: 2000px){
+    #heading{
+        display: flex;
+        flex-direction: column;
+    }
+    #Heading-buttons{
+        width: 69.5rem;
+    }
+    #heading div {
+        /* margin-right: auto;
+        align-self: flex-start; */
+    }
+    .Btn-items{
+        width: 10rem;
+        height: 3rem;
+        font-size: 1.3rem;
+
+    }
+    #heading-text-container-id{
+        margin-right: auto;
+        align-self: flex-start;
+        width: 40rem;
+    }
+    .empower {
+        font-size: 2.2rem;
+    }
+    #defrty {
+        
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-wrap: wrap;
+        width: 70rem;
+    }
+    #defrty h1{
+        
+    }
+    #heading-para {
+        width: 70rem;
+    }
+    #heading-para p {
+        font-size: 1rem;
+    }
+    #defrty h1:last-child {
+
+        color: #317ef3;
+        font-size: 2.3rem;
+        
+    }
+
+}
+
+
+/* @media (min-width: 1300px) and (max-width: 1800px){
+    #Heading-buttons{
+        width: 69.5rem;
+    }
+    #heading h1 {
+        margin-right: auto;
+        align-self: flex-start;
+    }
+    .Btn-items{
+        width: 15rem;
+        height: 4.5rem;
+        font-size: 1.3rem;
+
+    }
+    #heading-text-container-id{
+        border: 1px solid red;
+        width: 70rem;
+    }
+    .empower {
+        font-size: 3.5rem;
+    }
+    #defrty {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 70rem;
+    }
+    #defrty h1{
+        
+    }
+    #heading-para {
+        width: 70rem;
+    }
+    #heading-para p {
+        font-size: 1.5rem;
+    }
+    #defrty h1:last-child {
+    
+        color: #317ef3;
+        font-size: 4.5rem;
+        
+    }
+
+} */

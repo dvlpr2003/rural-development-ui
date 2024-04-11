@@ -8,7 +8,7 @@ a{
   color: black;
 }
 html {
-  width: 100vw;
+  /* width: 120vw; */
 
-  zoom: 0;
+  zoom: 1;
 }
