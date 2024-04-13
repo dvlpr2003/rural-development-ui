@@ -140,11 +140,74 @@
     #infras-heading h1,#infras-heading h1:last-child{
         font-size: 3.3rem;
     }
+    #info-container-main{
+        height: 230rem;
+    }
+    #container-2-component{
+        margin-top: 6rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .element-img img{
+        width: 35rem;
+        height: 35rem;
+        border-radius: 10px;
+    }
+    .element-blue-box{
+        width: 35rem;
+        height: 30rem;
+
+
+    }
+    .element-blue-box h3{
+        font-size: 2.5rem;
+
+    }
+    .element-blue-box span{
+        
+        font-size: 1.8rem;
+    }
+    #container-2-para{
+        text-align: center;
+        font-size: 1.6rem;
+    }
 
 }
 @media (min-width: 570px) and (max-width: 700px){
     #infras-heading h1,#infras-heading h1:last-child{
         font-size: 3.3rem;
     }
+    #info-container-main{
+        height: 230rem;
+    }
+    #container-2-component{
+        margin-top: 6rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .element-img img{
+        width: 35rem;
+        height: 35rem;
+        border-radius: 10px;
+    }
+    .element-blue-box{
+        width: 35rem;
+        height: 30rem;
+
+
+    }
+    .element-blue-box h3{
+        font-size: 2.5rem;
+
+    }
+    .element-blue-box span{
+        
+        font-size: 1.8rem;
+    }
+    #container-2-para{
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
 
 }
