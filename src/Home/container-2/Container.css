@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
 }
+
 #container-2-para{
     margin-top: 1rem;
     width: 73rem;
@@ -80,4 +81,13 @@
 }
 #electric {
     margin-top: 0.3rem;
+}
+#info-heading-container-2 h1 span {
+    color:red;
+    
+}
+
+
+@media (min-width: 340px) and (max-width: 450px){
+
 }

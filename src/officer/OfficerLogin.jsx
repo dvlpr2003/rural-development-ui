@@ -47,7 +47,7 @@ export default function OfficerLogin(){
         }
     }
     return(
-        <div style={{display:"flex",justifyContent:"center",alignItems:"center",border:"1px solid black",height:"100vh",backgroundColor:"#efeff9",position:"relative"}}>
+        <div id="officer-main-login-con"style={{backgroundColor:"#efeff9"}}>
             <BackTOhome/>
             <OfficerLoginItems setOfficerPassword={setOfficerPassword} setOfficerUserName={setOfficerUserName} lOGINofficer={lOGINofficer} uEmpty={uEmpty} pEmpty={pEmpty} EError={EError} PError={PError}/>
             {isLoading&&<LoadingAnimation/>}

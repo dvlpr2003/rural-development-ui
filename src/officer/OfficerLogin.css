@@ -23,3 +23,12 @@
     font-family: "Assistant", sans-serif;
 
 }
+#officer-main-login-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    position: relative;
+    background-color: #efeff9;
+    width: 100%;
+}
