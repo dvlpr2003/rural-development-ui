@@ -5,7 +5,10 @@ export default function InfrastructureDevelopment(){
         <>
         <div id="info-container-main">
         <div id="info-heading-container-2">
-          <h1>Infrastructure <span style={{color:"#317ef3",fontSize:'2.5rem'}}>Development</span></h1>
+        <div id="infras-heading">
+          <h1>Infrastructure</h1>
+          <h1 >Development</h1>
+          </div>
           <div id="container-2-para">
             <p>The state government has focused on improving rural infrastructure by constructing roads, bridges, and culverts to enhance connectivity between villages and urban centers.</p>
             <p>This includes initiatives like the construction of all-weather roads under the Pradhan Mantri Gram Sadak Yojana (PMGSY) and the Tamil Nadu Rural Road Development Scheme</p>
