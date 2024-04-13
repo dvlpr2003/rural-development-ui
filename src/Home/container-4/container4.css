@@ -1,10 +1,14 @@
 #Education-system-main{
     /* border: 1px solid black; */
+    /* border: 1px solid black; */
     background-color: #fafbf5;
-    height: 100vh;
+    width: 100%;
+    /* height: 55rem; */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 #Education-system-container-1{
     /* border: 1px solid black; */
@@ -13,11 +17,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 #Education-system-container-2{
     /* border: 1px solid black; */
-    width: 90vh;
+    width: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,8 +40,14 @@
 }
 .Education-system-containers{
     /* border: 1px solid red; */
-    width: 85vh;
-    height: 100vh;
+    /* width: 85vh; */
+    height: 50rem;
+
+}
+#Education-system-Heading h1:last-child{
+    color: #1470D8;
+    font-size: 1.4rem;
+    
 }
 #Education-system-para{
     margin-top: 1rem;
@@ -60,8 +71,7 @@
     border-radius: 50px;
 }
 #Education-system-elements{
-    /* border: 1px solid green; */
-    height: 80vh;
+    height: 37rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -104,4 +114,153 @@
     color: #938f8f;
 
     
+}
+@media (min-width: 340px) and (max-width: 450px){
+    #Education-system-container-1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+    #Education-system-Heading h1 {
+
+        font-size: 2rem;
+    }
+    #Education-system-Heading h1:last-child{
+        font-size: 2rem;
+    }
+    
+    #Education-system-para{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        width: 60rem;
+        /* border: 1px solid black; */
+    }
+    #Education-system-container-2{
+        width: 65rem;
+    }
+    #Education-system-para span {
+        font-size: 1.5rem;
+        
+        text-align: center;
+    }
+    .Education-item-txt h3 {
+        font-size: 1.4rem;
+    }
+    .Education-item-img img {
+        width: 5rem;
+        height: 5rem;
+    }
+    .Education-item-txt span {
+        font-size: 1.2rem;
+    }
+    #Education-system-image img{
+        height: 40rem;
+        width: 32rem;
+
+    }
+}
+@media (min-width: 450px) and (max-width: 570px){
+    #Education-system-container-1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+    #Education-system-Heading h1 {
+
+        font-size: 2rem;
+    }
+    #Education-system-Heading h1:last-child{
+        font-size: 2rem;
+    }
+    
+    #Education-system-para{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        width: 60rem;
+        /* border: 1px solid black; */
+    }
+    #Education-system-container-2{
+        width: 65rem;
+    }
+    #Education-system-para span {
+        
+        font-size: 1.5rem;
+
+        text-align: center;
+    }
+    .Education-item-txt h3 {
+        font-size: 1.4rem;
+    }
+    .Education-item-img img {
+        width: 5rem;
+        height: 5rem;
+    }
+    .Education-item-txt span {
+        font-size: 1.2rem;
+    }
+    #Education-system-image img{
+        height: 40rem;
+        width: 32rem;
+
+    }
+
+}
+@media (min-width: 570px) and (max-width: 700px){
+    #Education-system-container-1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+    #Education-system-Heading h1 {
+
+        font-size: 2rem;
+    }
+    #Education-system-Heading h1:last-child{
+        font-size: 2rem;
+    }
+    
+    #Education-system-para{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        width: 60rem;
+        /* border: 1px solid black; */
+    }
+    #Education-system-container-2{
+        width: 65rem;
+    }
+    #Education-system-para span {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .Education-item-txt h3 {
+        font-size: 1.4rem;
+    }
+    .Education-item-img img {
+        width: 5rem;
+        height: 5rem;
+    }
+    .Education-item-txt span {
+        font-size: 1.2rem;
+    }
+    #Education-system-image img{
+        height: 40rem;
+        width: 32rem;
+
+    }
+
 }

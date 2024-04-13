@@ -16,7 +16,7 @@ function EduCo1(){
         <div id="Education-system-container-1" className="Education-system-containers">
             <div id="Education-system-Heading">
             <h1>Empowering Minds, Building Futures:</h1>
-            <h1 style={{color:"#1470D8",fontSize:"1.7rem"}}>The Journey of Education Development</h1>
+            <h1>The Journey of Education Development</h1>
             </div>
             <div id="Education-system-image">
                 <img src="Home-container-4/Education.jpeg"/>
