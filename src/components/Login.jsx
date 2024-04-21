@@ -45,7 +45,7 @@ function Login({Username,setUsername,setisLogin,isLogin}){
   }
     return(
         <>
-        <Header isLogin={isLogin}/>
+        {/* <Header isLogin={isLogin}/> */}
         <div id="login-container">
         <div id="login-image-container">
           <img src="img/kid_login.jpeg" alt="login-kid-img"/>
@@ -54,6 +54,7 @@ function Login({Username,setUsername,setisLogin,isLogin}){
             <h2>Login</h2>
             <LoginElement LoginAction={LoginAction} setUsername={setUsername} setPassword={setPassword} uEmpty={uEmpty} pEmpty={pEmpty} EError={EError} PError={PError}/>
             {isLoading ?<LoadingAnimation/>:""}
+
         </div>
         </div>
         </>
@@ -75,7 +76,7 @@ function LoginElement({LoginAction,setUsername,setPassword,uEmpty,pEmpty,EError,
             </div>
             <p>Forgot Password?</p>
             <div id="login-xx-container">
-            <button onClick={LoginAction}>Login</button>
+            <button onClick={LoginAction} className="login-mt-4">Login</button>
             <p >Not a member? <NavLink to="/signup" style={{textDecoration:"none"}}>Signup</NavLink></p>
             </div>
         </div>
