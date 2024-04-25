@@ -130,6 +130,13 @@ h2 {
 
     
 }
+#s-btn{
+    background-color: black;
+    color: white;
+    height: 3rem;
+    border-radius: 20px;
+    border: 1px solid black;
+}
 
 /* login animation  */
 
@@ -157,4 +164,58 @@ h2 {
       to {
         transform: rotate(360deg);
       }
+    }
+    @media (min-width:50px) and (max-width:300px){
+        #signup-container-main{
+            width: auto;
+        }
+
+        #signup-img-container{
+            display: none;
+        }
+        .signup-container{
+            width: auto;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+        #s-elements input{
+            width: 10rem;
+        }
+        #fname-lname input {
+            width:5rem;
+
+        }
+        #s-btn{
+            width: 10rem;
+        }
+
+    }
+    @media (min-width:300px) and (max-width:550px){
+        #signup-container-main{
+            width: auto;
+        }
+        #signup-img-container{
+            display: none;
+        }
+        .signup-container{
+            width: auto;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+        
+        #s-btn{
+            width: 10rem;
+        }
+
+    }
+    @media (min-width:550px) and (max-width:750px){
+        #signup-img-container{
+            display: none;
+        }
+        .signup-container{
+            width: auto;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+
     }

@@ -79,7 +79,7 @@ export default function SignUp({isLogin}){
     }
     return(
         <>
-        <Header isLogin={isLogin}/>
+        {/* <Header isLogin={isLogin}/>s */}
         <div id="signup-container-main">
             <div id="signup-img-container" className="signup-container">
                 <img src="img/kid-signup.jpeg" alt="kid-img"/>
