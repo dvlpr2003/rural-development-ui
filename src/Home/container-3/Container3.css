@@ -66,7 +66,7 @@
     font-family: "Assistant", sans-serif;
     color:#8a8888;
     text-align: justify;
-    padding-right: 1.5em;
+    padding-right:8em;
     font-size: 1rem;
     line-height: 1.5rem;
 
@@ -143,6 +143,7 @@
     }
     #container3para-container p {
         padding-left: 1.5em;
+        padding-right: 1.5em;
     text-align: center;
     font-size: 1.5rem;
     line-height: 2.2rem;
@@ -198,6 +199,7 @@
     }
     #container3para-container p {
         padding-left: 1.5em;
+        padding-right: 1.5em;
     text-align: center;
     font-size: 1.5rem;
     line-height: 2.2rem;
@@ -257,6 +259,7 @@
     }
     #container3para-container p {
         padding-left: 1.5em;
+        padding-right: 1.5rem;
     text-align: center;
     font-size: 1.5rem;
     line-height: 2.2rem;
