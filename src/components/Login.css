@@ -131,10 +131,10 @@ p {
     }
 
 @media (min-width:50px) and (max-width:300px){
-    #login-container{
+    /* #login-container{
         height: 92.5rem;
-    }
-
+    } */
+  
     #login-image-container{
         display: none;
     }
@@ -156,9 +156,9 @@ p {
     }
 }
 @media (min-width:300px) and (max-width:550px){
-    #login-container{
+    /* #login-container{
         height: 65rem;
-    }
+    } */
     #login-image-container{
         display: none;
     }
@@ -181,9 +181,9 @@ p {
 
 }
 @media (min-width:550px) and (max-width:750px){
-    #login-container{
+    /* #login-container{
         height: 65rem;
-    }
+    } */
     #login-image-container{
         display: none;
     }
