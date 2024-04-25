@@ -133,11 +133,19 @@
         align-items: center;
         flex-wrap: wrap;
     }
-    #container3para-container span{
-        margin-right: 0;
-        text-align: center;
-        font-size: 1.5rem;
+    #container3para-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+    #container3para-container a span{
+    font-size: 1.5rem;
+        
+    }
+
+
+
     #container3Heading h1 {
         margin: 0;
     }
@@ -185,6 +193,17 @@
         /* height: 110rem; */
         height: auto;
     }
+    #container3para-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #container3para-container a span{
+    font-size: 1.5rem;
+        
+    }
+
     #container-3-main-element-1{
         display: flex;
         flex-direction: column;
@@ -252,6 +271,17 @@
         align-items: center;
         flex-wrap: wrap;
     }
+    #container3para-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #container3para-container a span{
+    font-size: 1.5rem;
+        
+    }
+
     #container3para-container span{
         margin-right: 0;
         text-align: center;
