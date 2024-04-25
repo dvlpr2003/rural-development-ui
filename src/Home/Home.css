@@ -14,6 +14,8 @@
 
 
 #heading-container{
+
+
     /* margin-top: 5rem;
     margin-bottom: 5rem; */
     /* width: 100vh; */
@@ -38,13 +40,14 @@
     gap: 1rem;
 }
 #heading-text-container-id{
+
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     /* justify-content: center;
     align-items: center; */
-    width: 38rem;
+    width: auto;
 }
 #heading{
     display: flex;
@@ -345,7 +348,7 @@
     }
     #heading-text-container-id{
         /* border: 1px solid red; */
-        width: 75rem;
+        /* width: 75rem; */
     }
 
     .heading-text-container h1{

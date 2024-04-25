@@ -1,4 +1,5 @@
 #Education-system-main{
+
     /* border: 1px solid black; */
     /* border: 1px solid black; */
     background-color: #fafbf5;
@@ -11,6 +12,7 @@
     gap: 4rem;
 }
 #Education-system-container-1{
+
     /* border: 1px solid black; */
     font-size: 0.8rem;
     display: flex;
@@ -21,8 +23,9 @@
     gap: 2rem;
 }
 #Education-system-container-2{
+
     /* border: 1px solid black; */
-    width: 40rem;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,6 +33,7 @@
     margin-right: 2.5rem;
 }
 #Education-system-Heading{
+
     font-family: "Carter One", system-ui;
 
 }
@@ -39,6 +43,7 @@
 
 }
 .Education-system-containers{
+    
     /* border: 1px solid red; */
     /* width: 85vh; */
     height: 50rem;
@@ -50,6 +55,7 @@
     
 }
 #Education-system-para{
+    
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -62,6 +68,7 @@
     color: #939090;
 }
 #Education-system-para button {
+    
     margin-top: 1rem;
     width: 7rem;
     height: 2rem;
@@ -71,12 +78,14 @@
     border-radius: 50px;
 }
 #Education-system-elements{
+    
     height: 37rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 .Education-system-elements-items{
+    
     /* border: 1px solid black; */
     display: flex;
     align-items: center;
@@ -85,6 +94,7 @@
 
 }
 .Education-item-img{
+    
     border: 1px solid  #efefff;
     background-color: #efefff;
     border-radius: 20px;
