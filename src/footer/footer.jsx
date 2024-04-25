@@ -15,6 +15,7 @@ export default function Footer(){
 
                 </div>
                 <span>+123456789</span>
+                
             </div>
             <div id="term-foo-con">
                 <span>Terms And Condition</span>
