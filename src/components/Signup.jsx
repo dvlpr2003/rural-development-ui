@@ -53,7 +53,7 @@ export default function SignUp({isLogin}){
         try{
             setisLoading(true)
             await delay(2500)
-            const response = await axios.post("http://127.0.0.1:8000/api/signup/",Data);
+            const response = await axios.post("https://dvlpr2003.pythonanywhere.com/api/signup/",Data);
             console.log(response.data)
             setisLoading(false)
             setisVerify(true)
@@ -67,7 +67,7 @@ export default function SignUp({isLogin}){
         setOTP(OTP1+OTP2+OTP3+OTP4+OTP5+OTP6)
 
         try{
-            const response = await axios.get(`http://127.0.0.1:8000/api/email/${eMail}/otp/${OTP}/`)
+            const response = await axios.get(`https://dvlpr2003.pythonanywhere.com/api/email/${eMail}/otp/${OTP}/`)
             if(response["data"][0] === "Success"){
                 setisVerify(false)
                 navigate("/Login")

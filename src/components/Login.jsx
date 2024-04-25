@@ -25,7 +25,7 @@ function Login({Username,setUsername,setisLogin,isLogin}){
     try{
       setisLoading(true)
       await delay(2500)
-      const response = await axios.get(`http://127.0.0.1:8000/api/email/${Username}/password/${password}/`);
+      const response = await axios.get(`https://dvlpr2003.pythonanywhere.com/api/email/${Username}/password/${password}/`);
       console.log(response.data)
       if (response.data["status"] === "invalid password"){
         setPError(true)

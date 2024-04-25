@@ -18,7 +18,7 @@ export default function OfficerPage(){
     useEffect(function(){
         async function GetTotal(){
             try{
-                const response = await axios.get("http://127.0.0.1:8000/api/total_user/")
+                const response = await axios.get("https://dvlpr2003.pythonanywhere.com/api/total_user/")
                 settotalUser(response.data["total"])
             }catch(error){
                 console.log(error)
@@ -29,7 +29,7 @@ export default function OfficerPage(){
     useEffect(function(){
         async function GetTotalComplaints(){
             try{
-                const response = await axios.get("http://127.0.0.1:8000/api/total_complaint/")
+                const response = await axios.get("https://dvlpr2003.pythonanywhere.com/api/total_complaint/")
                 settotalComplaint(response.data["total"])
 
             }catch(error){
@@ -41,7 +41,7 @@ export default function OfficerPage(){
     useEffect(function(){
     async function GetUser(){
         try{
-            const response = await axios.get("http://127.0.0.1:8000/api/signup/")
+            const response = await axios.get("https://dvlpr2003.pythonanywhere.com/api/signup/")
             setUserList(response.data)
         }catch(error){
             console.log(error)
@@ -54,7 +54,7 @@ async function GetComplaintData(){
     setisComplaint(true)
     setisFinal(false)
     try{
-        const response = await axios.get("http://127.0.0.1:8000/api/complaints/");
+        const response = await axios.get("https://dvlpr2003.pythonanywhere.com/api/complaints/");
         setisComplaintFt(response.data)
     }catch(error){
         console.log(error)
@@ -79,7 +79,7 @@ useEffect(function(){
 useEffect(function(){
     async function GetuserDetailsFt(){
         try{
-            const response = await axios.get(`http://127.0.0.1:8000/api/get_user/${Userft}/`);
+            const response = await axios.get(`https://dvlpr2003.pythonanywhere.com/api/get_user/${Userft}/`);
             setUserftList(response.data)
         }catch(error){
             console.log(error)
@@ -181,7 +181,7 @@ function FinalOverviewItems({setisComplaint,setisFinal,FinalData,UserftList,}){
     async function AcceptComplaint(){
         try{
             console.log(UserftList.mail)
-            const response = await axios.post(`http://127.0.0.1:8000/api/Complaint/${UserftList.mail}/Accept/${FinalData.id}/`)
+            const response = await axios.post(`https://dvlpr2003.pythonanywhere.com/api/Complaint/${UserftList.mail}/Accept/${FinalData.id}/`)
             console.log(response.data["status"])
 
         }catch(error){

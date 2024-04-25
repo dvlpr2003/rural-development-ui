@@ -28,7 +28,7 @@ export default function OfficerLogin(){
         try{
             setisLoading(true)
             await delay(3000)
-            const response = await axios.get(`http://127.0.0.1:8000/api/officer_login/${OfficerUserName}/password/${OfficerPassword}/`)
+            const response = await axios.get(`https://dvlpr2003.pythonanywhere.com/api/officer_login/${OfficerUserName}/password/${OfficerPassword}/`)
             console.log(response.data)
             setisLoading(false)
             if (response.data["status"] === "invalid password"){
