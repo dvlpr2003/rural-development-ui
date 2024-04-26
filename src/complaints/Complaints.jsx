@@ -216,7 +216,7 @@ function ComplaintComponent2Items(){
                 <span>Redefining Rural Development in Tamil Nadu</span>
             </div>
             <NavLink to="/Complaint-form">
-                <button>Raise Complaint</button>
+                <button className="blue-raise-btn">Raise Complaint</button>
             </NavLink>
 
         </div>

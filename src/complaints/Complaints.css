@@ -69,11 +69,18 @@
     align-items: center;
 }
 #complaint-component-2{
-    width: 100%;
+
+    width: auto;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+.blue-raise-btn {
+    height: 3rem;
+    font-size: 1.1rem;
 }
 
 #complaint-component-2-items{
