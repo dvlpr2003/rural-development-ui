@@ -9,7 +9,7 @@ import "./Complaints.css"
 export default function Complaints({isLogin}){
     return(
         <>
-        <Header isLogin={isLogin}/>
+        {/* <Header isLogin={isLogin}/> */}
         <div id="complaint-main">
             <ComplaintHeading/>
         </div>
@@ -27,11 +27,11 @@ function ComplaintHeading(){
                 <h1 id="jldoid">The Tamil Nadu Rural Development Revolution</h1>
             </div>
             <div id="complaint-sub-heading">
-                <span>Building Stronger Foundations</span>
-                <span>Redefining Rural Development in Tamil Nadu</span>
+                <p>Building Stronger Foundations</p>
+                <p>Redefining Rural Development in Tamil Nadu</p>
             </div>
             <NavLink to="/Complaint-form">
-            <button>Raise your Complaint</button>
+            <button className="raise-btn">Raise your Complaint</button>
             </NavLink>
             
 
