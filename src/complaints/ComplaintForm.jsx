@@ -159,7 +159,7 @@ function FormBody({setComplaintCategory,setComplaintName,setComplaintLocation,se
                     
                 </textarea>
             </div>
-            <button onClick={UpdateComplaint}>Register</button>
+            <button className="complaint-form-register-btn"onClick={UpdateComplaint}>Register</button>
            
 
         </div>

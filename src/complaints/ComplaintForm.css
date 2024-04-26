@@ -16,7 +16,10 @@
 }
 #form-body{
     /* border: 1px solid black; */
-    width: 50rem;
+    width: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -129,4 +132,40 @@ textarea{
     height: 13rem;
     margin-left: 1rem;
     margin-bottom: 0.4rem;
+}
+.complaint-form-register-btn{
+    height: 3rem;
+    border-radius: 20px;
+    border: 1px solid rgb(172, 170, 170);
+}
+
+@media (min-width:50px) and (max-width:300px){
+    #form-body{
+        width: auto;
+    }
+
+}
+@media (min-width:300px) and (max-width:550px){
+    #form-body{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    #category,#comp-name,#comp-image,#comp-location,#comp-dist,#comp-pincode{
+        width: 30rem;
+    }
+    #complaint-txt{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    textarea{
+        width: 25rem;
+        
+    }
+}
+@media (min-width:550px) and (max-width:750px){
+
 }
