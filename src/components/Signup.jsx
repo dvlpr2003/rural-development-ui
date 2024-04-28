@@ -208,8 +208,8 @@ function OTPVerifyPage({setOTP1,setOTP2,setOTP3,setOTP4,setOTP5,setOTP6,OTP1,OTP
                 <input type="text" maxLength={"1"} value={OTP6} onChange={e=>setOTP6(e.target.value)}/>
             </div>
             <div id="otp-button-container">
-                <button onClick={ClearOTP}>Clear</button>
-                <button onClick={Demo}>Verify</button>
+                <button className="otp-btns" onClick={ClearOTP}>Clear</button>
+                <button className="otp-btns" onClick={Demo}>Verify</button>
             </div>
 
         </div>
