@@ -9,6 +9,7 @@ export default function Header({isLogin,setisLogin}){
     const [isServiceOption,setisServiceOption]=useState(false)
     const [isInfo,setisInfo]=useState(false)
     const [isProfile,setisProfile]=useState(false)
+    const [isMenu,setMenu]=useState(true)
     // const [isLogoutEvent,setisLogoutEvent]=useState(false)
 
     const navigate = useNavigate();
@@ -74,6 +75,10 @@ export default function Header({isLogin,setisLogin}){
             }
             {isInfo?<InfrastructureDevelopmentOptions/>:""}
             {isProfile?<ProfileOptions LogoutEvent={LogoutEvent}/>:""}
+            <MenuBar setMenu={setMenu}/>
+
+
+            <MenuItems isLogin={isLogin} LogoutEvent={LogoutEvent} isMenu={isMenu}/>
 
 
         </div>
@@ -113,6 +118,34 @@ function ProfileOptions({LogoutEvent}){
                 Profile
             </NavLink>
             <span style={{cursor:"pointer",fontFamily:"Assistant"}} onClick={LogoutEvent}>Logout</span>
+
+        </div>
+    )
+}
+function MenuBar({setMenu}){
+    return(
+        <div className='menu-bar-c4-mg' >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" onClick={()=>setMenu((e)=>!e)}>
+<path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+</svg>
+        </div>
+    )
+}
+function MenuItems({isLogin,isProfile,LogoutEvent,isMenu}){
+    return(
+        <div className='menu-bar-item-c7' style={isMenu?{display:"none"}:{display:"flex"}} >
+            <NavLink to="/"><span>Home</span></NavLink >
+            <NavLink to='/officer-login'><span>Officer login</span></NavLink>
+            { !isLogin?
+                <>
+                <NavLink to ="/signup" id='signup-btn'>Sign up</NavLink>
+                <NavLink to="/login" id='Login-btn'><span>Login</span></NavLink></> :
+                <NavLink to="/people" style={{fontFamily:"Assistant"}}>
+                 Profile
+                </NavLink>
+                }
+
+            {isLogin?<span style={{cursor:"pointer",fontFamily:"Assistant"}} onClick={LogoutEvent}>Logout</span>:""}
         </div>
     )
 }

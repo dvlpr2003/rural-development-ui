@@ -20,8 +20,9 @@ h2 {
     position: relative;
     border: 1px solid #ffffff;
     border-radius: 20px;
-    width: 35rem;
-    height: 39rem;
+    width: auto;
+    height: auto;
+    padding-bottom: 1rem;
 }
 #signup-img-container{
     display: flex;
@@ -62,7 +63,7 @@ h2 {
     gap: 2rem;
 }
 #s-btn-container{
-    width: 30rem;
+    width: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -174,7 +175,7 @@ h2 {
     }
     @media (min-width:50px) and (max-width:300px){
         #signup-container-main{
-            width: auto;
+            width: 100%;
         }
 
         #signup-img-container{
@@ -199,9 +200,10 @@ h2 {
     }
     @media (min-width:300px) and (max-width:550px){
         #signup-container-main{
-            width: auto;
+            width: 100%;
         }
         #signup-img-container{
+
             display: none;
         }
         .signup-container{
@@ -212,6 +214,18 @@ h2 {
         
         #s-btn{
             width: 10rem;
+        }
+        #fname-lname{
+            display: flex;
+            flex-direction: column;
+
+        }
+        #s-elements input{
+            width: 9rem;
+        }
+        .signup-container{
+            padding-left: 4rem;
+            padding-right: 4rem;
         }
 
     }

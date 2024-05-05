@@ -9,7 +9,7 @@ import "./Complaints.css"
 export default function Complaints({isLogin}){
     return(
         <>
-        {/* <Header isLogin={isLogin}/> */}
+        <Header isLogin={isLogin}/>
         <div id="complaint-main">
             <ComplaintHeading/>
         </div>

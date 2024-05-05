@@ -45,7 +45,7 @@ function Login({Username,setUsername,setisLogin,isLogin}){
   }
     return(
         <>
-        {/* <Header isLogin={isLogin}/> */}
+        <Header isLogin={isLogin}/>
         <div id="login-container">
         <div id="login-image-container">
           <img src="img/kid_login.jpeg" alt="login-kid-img"/>
