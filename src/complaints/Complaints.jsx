@@ -15,7 +15,7 @@ export default function Complaints({isLogin}){
         </div>
         <ComplaintComponent1/>
         <ComplaintComponent2/>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }
