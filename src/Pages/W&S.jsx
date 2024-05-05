@@ -10,7 +10,7 @@ export default function WaterSupplyandSanitation({isLogin,setisLogin}){
             <RTElements1/>
             <RTElements2/>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }
@@ -19,10 +19,10 @@ function RTElements1(){
         <div className="pages-element-1">
             {/* font-family: "Anton", sans-serif; */}
             {/* font-family: "Archivo Black", sans-serif; */}
-            <h1 style={{marginTop:"2rem",marginBottom:"2rem",color:"#393737",fontFamily:"Archivo Black",fontWeight:"normal",fontSize:"2.6rem"}}>Water Supply and Sanitation</h1>
+            <h1 className="p3-c7">Water Supply and Sanitation</h1>
             <img src="Home-container-2/water.jpeg" style={{width:"20rem",height:"20rem",borderRadius:"20px",marginBottom:"2rem"}}/>
             <div className="page-container-1">
-                <h3>Expansion of Coverage</h3>
+                <h2>Expansion of Coverage</h2>
                 <p>
                 Expanding coverage of water supply and sanitation services ensures that all communities, regardless of their location or socio-economic status, have access to essential services for drinking water, hygiene, and sanitation. This is essential for promoting social inclusion, reducing inequalities, and improving the quality of life for residents across Tamil Nadu.
                 Increasing coverage of water supply and sanitation services has significant public health benefits. Access to clean drinking water and sanitation facilities helps prevent waterborne diseases, reduce the spread of infections, and improve overall public health outcomes, particularly among vulnerable populations such as children, the elderly, and people with compromised immune systems.

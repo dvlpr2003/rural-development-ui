@@ -12,7 +12,7 @@ export default function AgricultureandDevelopment({isLogin,setisLogin}){
             <RTElements1/>
             <RTElements2/>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }
@@ -21,10 +21,10 @@ function RTElements1(){
         <div className="pages-element-1">
             {/* font-family: "Anton", sans-serif; */}
             {/* font-family: "Archivo Black", sans-serif; */}
-            <h1 style={{marginTop:"2rem",marginBottom:"2rem",color:"#393737",fontFamily:"Archivo Black",fontWeight:"normal",fontSize:"2.6rem"}}>Agriculture and Development</h1>
-            <img src="Home-container-3/agri.jpeg" style={{width:"50rem",height:"20rem",borderRadius:"20px",marginBottom:"2rem"}}/>
+            <h1 className="p3-c7">Agriculture and Development</h1>
+            <img src="Home-container-3/agri.jpeg" style={{width:"20rem",height:"20rem",borderRadius:"20px",marginBottom:"2rem"}}/>
             <div className="page-container-1">
-                <h3>Investment in Infrastructure</h3>
+                <h2>Investment in Infrastructure</h2>
                 <p>
                 Infrastructure investment stimulates economic growth by creating jobs, boosting productivity, and attracting private sector investment in Tamil Nadu. Building and upgrading infrastructure such as roads, ports, airports, railways, and energy facilities creates employment opportunities in construction, manufacturing, and related sectors, driving economic activity and increasing income levels across the state.
                 Infrastructure investment improves connectivity and accessibility, facilitating the movement of goods, services, and people within Tamil Nadu and beyond. Developing a well-connected transportation network, including roads, highways, and public transit systems, reduces travel times, transportation costs, and congestion, enhancing efficiency and competitiveness for businesses and industries.

@@ -12,19 +12,17 @@ export default function RoadsandTransport({isLogin,setisLogin}){
             <RTElements1/>
             <RTElements2/>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }
 function RTElements1(){
     return(
         <div className="pages-element-1">
-            {/* font-family: "Anton", sans-serif; */}
-            {/* font-family: "Archivo Black", sans-serif; */}
-            <h1 style={{marginTop:"2rem",marginBottom:"2rem",color:"#393737",fontFamily:"Archivo Black",fontWeight:"normal",fontSize:"2.6rem"}}>Road and Transport</h1>
+            <h1 className="p3-c7">Road and Transport</h1>
             <img src="Home-container-2/road.jpeg" style={{width:"20rem",height:"20rem",borderRadius:"20px",marginBottom:"2rem"}}/>
             <div className="page-container-1">
-                <h3>Road Infrastructure</h3>
+                <h2>Road Infrastructure</h2>
                 <p>However, road infrastructure development is not without its challenges. One of the primary obstacles is inadequate funding for construction, maintenance, and upgrades. Governments often face budget constraints and competing priorities, leading to underinvestment in road infrastructure projects. Additionally, rapid urbanization and population growth exert immense pressure on existing road networks, resulting in congestion, pollution, and deteriorating road conditions. Moreover, natural disasters, such as floods and landslides, can inflict severe damage on roads, disrupting transportation networks and impeding recovery efforts.
                 First and foremost, road infrastructure encompasses a diverse array of roadways, ranging from local streets and rural lanes to major highways and expressways. These roads serve different purposes, catering to various types of traffic and accommodating diverse transportation needs. National highways, for instance, link major cities and economic centers across vast distances, facilitating long-distance travel and freight movement. On the other hand, urban streets and neighborhood roads provide last-mile connectivity, enabling commuters to reach their destinations within cities and towns.
                 </p>

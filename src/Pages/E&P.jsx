@@ -11,7 +11,7 @@ export default function ElectricityandPower({isLogin,setisLogin}){
             <RTElements1/>
             <RTElements2/>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }
@@ -20,10 +20,10 @@ function RTElements1(){
         <div className="pages-element-1">
             {/* font-family: "Anton", sans-serif; */}
             {/* font-family: "Archivo Black", sans-serif; */}
-            <h1 style={{marginTop:"2rem",marginBottom:"2rem",color:"#393737",fontFamily:"Archivo Black",fontWeight:"normal",fontSize:"2.6rem"}}>Electricity and Power</h1>
+            <h1 className="p3-c7">Electricity and Power</h1>
             <img src="Home-container-2/electricity.jpeg" style={{width:"20rem",height:"20rem",borderRadius:"20px",marginBottom:"2rem"}}/>
             <div className="page-container-1">
-                <h3>Investment in Renewable Energy</h3>
+                <h2>Investment in Renewable Energy</h2>
                 <p>
                 Investing in renewable energy helps diversify Tamil Nadu's energy sources, reducing reliance on imported fossil fuels and volatile international energy markets. By harnessing the state's abundant renewable resources, Tamil Nadu can enhance energy security and mitigate the risks associated with fossil fuel dependency.
                 Transitioning to renewable energy sources such as wind and solar power can significantly reduce greenhouse gas emissions, mitigating the impacts of climate change and air pollution. Given Tamil Nadu's commitment to combatting climate change and improving air quality, investment in renewable energy aligns with the state's environmental objectives.

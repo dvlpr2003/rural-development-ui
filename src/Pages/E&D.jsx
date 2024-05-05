@@ -11,7 +11,7 @@ export default function EducationandDevelopment({isLogin,setisLogin}){
             <RTElements1/>
             <RTElements2/>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }
@@ -20,10 +20,10 @@ function RTElements1(){
         <div className="pages-element-1">
             {/* font-family: "Anton", sans-serif; */}
             {/* font-family: "Archivo Black", sans-serif; */}
-            <h1 style={{marginTop:"2rem",marginBottom:"2rem",color:"#393737",fontFamily:"Archivo Black",fontWeight:"normal",fontSize:"2.6rem"}}>Education and Development</h1>
+            <h1 className="p3-c7">Education and Development</h1>
             <img src="Home-container-4/Education.jpeg" style={{width:"20rem",height:"20rem",borderRadius:"20px",marginBottom:"2rem"}}/>
             <div className="page-container-1">
-                <h3>Quality Education and Teacher Training</h3>
+                <h2>Quality Education and Teacher Training</h2>
                 <p>Quality education ensures that students acquire knowledge, skills, and competencies that are relevant, meaningful, and applicable to real-world contexts in Tamil Nadu. By emphasizing learner-centered approaches, active learning methodologies, and experiential learning opportunities, quality education promotes deeper understanding, retention, and application of concepts, leading to improved academic performance and learning outcomes for students.
                 Quality education promotes equity and inclusion by ensuring that all students, regardless of their background, abilities, or socio-economic status, have access to high-quality learning opportunities in Tamil Nadu. By addressing disparities, providing targeted support for marginalized groups, and fostering a culture of diversity and inclusivity, quality education helps narrow the achievement gap and promote social justice and equality in education.
                 Effective teacher training programs enhance the quality and effectiveness of teaching practices in Tamil Nadu. By providing pre-service and in-service training, professional development opportunities, and mentoring support, teacher training initiatives equip educators with the pedagogical knowledge, classroom management skills, and instructional strategies needed to engage students, facilitate learning, and promote positive learning outcomes.
