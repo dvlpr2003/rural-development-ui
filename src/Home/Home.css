@@ -1,9 +1,4 @@
-/* body{
-    display: flex;
-    flex-direction:column ;
-    align-items: center;
-    justify-content: center;
-} */
+
 #root{
     display: flex;
     flex-direction: column;
@@ -14,23 +9,12 @@
 
 
 #heading-container{
-
-
-    /* margin-top: 5rem;
-    margin-bottom: 5rem; */
-    /* width: 100vh; */
     height: 50rem;
-    /* border: 1px solid black; */
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
     gap: 3rem;
-    /* align-items: center; */
-
-
 }
 .H-containers{
-
     width: 40rem;
     display: flex;
     flex-direction: column;
@@ -40,13 +24,9 @@
     gap: 1rem;
 }
 #heading-text-container-id{
-
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* justify-content: center;
-    align-items: center; */
     width: auto;
 }
 #heading{
@@ -56,13 +36,11 @@
     align-items: center;
     flex-wrap: wrap;
     margin-left:3em;
-
 }
 #heading h1{
     font-family: "Carter One", system-ui;
     font-weight: 400;
     font-style: normal;
-    
 }
 #heading-para{
     display: flex;
@@ -74,7 +52,6 @@
     font-family: "Cambay", sans-serif;
     color: #8a8888;
     font-size: 0.9rem;
-
 }
 #Heading-buttons{
     width: 70vh;
@@ -83,7 +60,6 @@
     /* justify-content: center; */
     align-items: center;
     flex-wrap: wrap;
-
     gap: 4rem;
 }
 .Btn-items {
@@ -96,43 +72,28 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
     text-decoration: none;
     color: white;
     font-family: sans-serif;
 }
 #defrty{
-    /* width: 35rem; */
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center;
-    align-items: center; */
     gap: 1.5rem;
 }
 #defrty h1:last-child {
-    
     color: #317ef3;
     font-size: 2.5rem;
-    
 }
-
-
-
-/* media query for home contianer-1*/
-
-
 @media (min-width: 340px) and (max-width: 450px) {
     #home-heading-container-main{
-        /* border: 1px solid blue; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
          flex-wrap: wrap;
-
     }
     #defrty{
-        /* width: 35rem; */
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -143,28 +104,22 @@
         font-size: 3.5rem;
     }
     #defrty h1:last-child {
-    
         color: #317ef3;
         font-size: 3.3rem;
-        
     }
     #heading-container{
-        /* border: 1px solid rgb(149, 34, 34); */
-        /* height: auto; */
         width: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-
     }
     #slid-image-con{
         display: none;
     }
     #heading{
         width: 70rem;
-        /* border: 1px solid black; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -173,7 +128,6 @@
         margin: 0;
     }
     #heading-text-container-id{
-        /* border: 1px solid red; */
         width: 70rem;
     }
 
@@ -203,7 +157,6 @@
         width: 12rem;
         height: 4rem;
         font-size: 1.3rem;
-
     }
 
 }
@@ -216,13 +169,11 @@
         justify-content: center;
         align-items: center;
          flex-wrap: wrap;
-
     }
     .empower {
         font-size: 3.5rem;
     }
     #defrty{
-        /* width: 35rem; */
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -236,8 +187,6 @@
         
     }
     #heading-container{
-        /* border: 1px solid rgb(149, 34, 34); */
-        /* height: auto; */
         width: auto;
         display: flex;
         flex-direction: column;
@@ -251,7 +200,6 @@
     }
     #heading{
         width: 70rem;
-        /* border: 1px solid black; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -260,7 +208,6 @@
         margin: 0;
     }
     #heading-text-container-id{
-        /* border: 1px solid red; */
         width: 70rem;
     }
 
@@ -297,7 +244,6 @@
 
 @media (min-width: 570px) and (max-width: 700px) {
     #home-heading-container-main{
-        /* border: 1px solid blue; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -306,7 +252,6 @@
 
     }
     #defrty{
-        /* width: 35rem; */
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -323,8 +268,6 @@
         
     }
     #heading-container{
-        /* border: 1px solid rgb(149, 34, 34); */
-        /* height: auto; */
         width: auto;
         display: flex;
         flex-direction: column;
@@ -338,7 +281,6 @@
     }
     #heading{
         width: 70rem;
-        /* border: 1px solid black; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -347,8 +289,7 @@
         margin: 0;
     }
     #heading-text-container-id{
-        /* border: 1px solid red; */
-        /* width: 75rem; */
+
     }
 
     .heading-text-container h1{
@@ -384,14 +325,12 @@
 @media (min-width: 700px) and (max-width: 900px){
     #heading{
         display: flex;
-        /* flex-direction: column; */
     }
     #Heading-buttons{
         width: 69.5rem;
     }
     #heading div {
-        /* margin-right: auto;
-        align-self: flex-start; */
+
     }
     .Btn-items{
         width: 10rem;
