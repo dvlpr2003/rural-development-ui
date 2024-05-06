@@ -74,6 +74,7 @@ useEffect(function(){
                 }
         setOverData(data)
     }
+    
     Fun()
 },[UserftList])
 useEffect(function(){
@@ -199,7 +200,7 @@ function FinalOverviewItems({setisComplaint,setisFinal,FinalData,UserftList,}){
                 <span>Pincode  : {FinalData.pincode}</span>
             </div>
             <div style={{width:"35rem",display:'flex',marginTop:"1rem"}}>
-                <button onClick={AcceptComplaint}style={{backgroundColor:FinalData.Accepted?"green":"#4479f4",border:FinalData.Accepted?"1px solid green":"1px solid #4479f4",marginLeft:"auto",alignSelf:"flex-end",width:"10rem",marginRight:"3rem"}}>{FinalData.Accepted?"Accepted":"Accept"}</button>
+                <button onClick={AcceptComplaint}style={{backgroundColor:FinalData.Accepted?"green":"#4479f4",border:FinalData.Accepted?"1px solid green":"1px solid #4479f4",marginLeft:"auto",alignSelf:"flex-end",width:"10rem",marginRight:"3rem"}} className="c3-c5-c7">{FinalData.Accepted?"Accepted":"Accept"}</button>
             </div>
             <div style={{position:"absolute",left:"1rem",top:"1rem"}}>
                 <div id="final-btn" onClick={()=>{

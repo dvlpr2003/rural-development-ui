@@ -1,5 +1,6 @@
 #officer-login-items-controller{
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    
     border-radius: 20px;
     width: 30rem;
     height: 28rem;
@@ -9,6 +10,7 @@
     background-color: white;
     
 }
+
 #officer-login-items-controller div label{
     font-family: "Assistant", sans-serif;
 
@@ -31,4 +33,29 @@
     position: relative;
     background-color: #efeff9;
     width: 100%;
+}
+.officer-btn-login-c3-w7{
+    width: 20rem;
+    height: 2.5rem;
+    border-radius:10px;
+    background-color: #232323;
+    color: white;
+}
+@media (min-width:300px) and (max-width:550px){
+    #officer-login-items-controller{
+        width: 20rem;
+
+    }
+    #officer-login-items-controller div input {
+        width: 13rem;
+    }
+    .officer-btn-login-c3-w7{
+        width: 14.5rem;
+        height: 2.5rem;
+        border-radius:10px;
+        background-color: #232323;
+        color: white;
+
+    }
+
 }

@@ -1,6 +1,6 @@
 #officer-main-page{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
 }
 #officer-options{
@@ -182,6 +182,11 @@
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+}
+.c3-c5-c7 {
+    height: 3rem;
+    border-radius: 10px;
+    color: white;
 }
 #user-overview-contacts span {
     font-family: "Arsenal", sans-serif;

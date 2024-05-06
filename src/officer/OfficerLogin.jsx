@@ -46,6 +46,7 @@ export default function OfficerLogin(){
             setisLoading(false)
         }
     }
+    
     return(
         <div id="officer-main-login-con"style={{backgroundColor:"#efeff9"}}>
             <BackTOhome/>
@@ -72,7 +73,7 @@ function OfficerLoginItems({setOfficerPassword,setOfficerUserName,lOGINofficer,u
 
                 <span style={{marginTop:"2.5rem",fontFamily:"Assistant",color:"#4c94ff"}}>Forgot password</span>
                 <div style={{marginTop:"1rem"}}>
-                    <button onClick={lOGINofficer}>Login</button>
+                    <button onClick={lOGINofficer} className="officer-btn-login-c3-w7">Login</button>
                 </div>
             </div>
         </div>
