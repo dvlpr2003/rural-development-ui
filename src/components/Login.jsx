@@ -74,7 +74,10 @@ function LoginElement({LoginAction,setUsername,setPassword,uEmpty,pEmpty,EError,
             <input id="password" type="password" onChange={(e)=>setPassword(e.target.value)} style={pEmpty ? {border:"1px solid red"} : {border:"1px solid #c0c0c0"}}/>
             <p className="username-error" style={PError?{display:"block"}:{display:"none"}}>Incorrect password</p>
             </div>
+            
+            <NavLink to="/Forget-password">
             <p>Forgot Password?</p>
+            </NavLink>
             <div id="login-xx-container">
             <button onClick={LoginAction} className="login-mt-4">Login</button>
             <p >Not a member? <NavLink to="/signup" style={{textDecoration:"none"}}>Signup</NavLink></p>

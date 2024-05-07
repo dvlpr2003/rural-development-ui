@@ -43,10 +43,12 @@ function App() {
       <Route path='/Roads-and-Transport' element={<RoadsandTransport isLogin={isLogin} setisLogin={setisLogin}/>}/>
       <Route path='/Water-Supply-and-Sanitation' element={<WaterSupplyandSanitation isLogin={isLogin} setisLogin={setisLogin}/>}/>
       <Route path='/Electricity-and-Power' element={<ElectricityandPower isLogin={isLogin} setisLogin={setisLogin}/>}/>
+      <Route path='/Forget-password' element={<ForgetPassword/>
+}/>
+
 
     </Routes>
     </BrowserRouter>
-    {/* <ForgetPassword/> */}
   
     
     </>
