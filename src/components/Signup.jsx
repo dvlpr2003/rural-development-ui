@@ -59,7 +59,6 @@ export default function SignUp({isLogin}){
         }
     }
     async function Verify_Otp(){
-
         try{
             setLodingG(true)
             const response = await axios.get(`https://dvlpr2003.pythonanywhere.com/api/email/${eMail}/otp/${OTP}/`)
@@ -68,11 +67,9 @@ export default function SignUp({isLogin}){
                 setisVerify(false)
                 navigate("/Login")
             };
-
         }catch(error){
             console.log("error",error)
             setLodingG(false)
-
         }
     }
     return(
@@ -192,7 +189,6 @@ function OTPVerifyPage({Verify_Otp,setOTP,OTP,LoadingG}){
                 <button className="otp-btns" onClick={Demo}>Verify</button>
             </div>
             <div class="-n" style={!LoadingG?{display:"none"}:{}}></div>
-
         </div>
     )
 }
