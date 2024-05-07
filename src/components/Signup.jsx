@@ -205,11 +205,6 @@ function OTPVerifyPage({Verify_Otp,setOTP,OTP}){
             </div>
             <div id="otp-input-container">
                 <input type="text" value={OTP} onChange={e=>setOTP(e.target.value)}/>
-                {/* <input type="text" maxLength={"1"} value={OTP2} onChange={e=>setOTP2(e.target.value)}/>
-                <input type="text" maxLength={"1"} value={OTP3} onChange={e=>setOTP3(e.target.value)}/>
-                <input type="text" maxLength={"1"} value={OTP4} onChange={e=>setOTP4(e.target.value)}/>
-                <input type="text" maxLength={"1"} value={OTP5} onChange={e=>setOTP5(e.target.value)}/>
-                <input type="text" maxLength={"1"} value={OTP6} onChange={e=>setOTP6(e.target.value)}/> */}
             </div>
             <div id="otp-button-container">
                 <button className="otp-btns" onClick={ClearOTP}>Clear</button>
