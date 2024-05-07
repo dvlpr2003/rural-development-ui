@@ -23,14 +23,9 @@ export default function SignUp({isLogin}){
     const [Data,setData] = useState()
     const [isLoading,setisLoading]=useState(false)
     const [isVerify,setisVerify] = useState(false)
-    // otp
-    // const[OTP1,setOTP1] = useState("")
-    // const[OTP2,setOTP2] = useState("")
-    // const[OTP3,setOTP3] = useState("")
-    // const[OTP4,setOTP4] = useState("")
-    // const[OTP5,setOTP5] = useState("")
-    // const[OTP6,setOTP6] = useState("")
+  
     const [OTP,setOTP]=useState("") // main otp
+    const [LoadingG,setLodingG] = useState(false)
     useEffect (function(){
         let all_data ={
             
@@ -66,13 +61,17 @@ export default function SignUp({isLogin}){
     async function Verify_Otp(){
 
         try{
+            setLodingG(true)
             const response = await axios.get(`https://dvlpr2003.pythonanywhere.com/api/email/${eMail}/otp/${OTP}/`)
+            setLodingG(false)
             if(response["data"][0] === "Success"){
                 setisVerify(false)
                 navigate("/Login")
             };
+
         }catch(error){
             console.log("error",error)
+            setLodingG(false)
 
         }
     }
@@ -102,25 +101,14 @@ export default function SignUp({isLogin}){
             </div>
             { isVerify ?
             <OTPVerifyPage
-            // setOTP1={setOTP1}
-            // setOTP2={setOTP2}
-            // setOTP3={setOTP3}
-            // setOTP4={setOTP4}
-            // setOTP5={setOTP5}
-            // setOTP6={setOTP6}
-            // OTP1={OTP1}
-            // OTP2={OTP2}
-            // OTP3={OTP3}
-            // OTP4={OTP4}
-            // OTP5={OTP5}
-            // OTP6={OTP6}
             OTP={OTP}
             setOTP = {setOTP}
             Verify_Otp={Verify_Otp}
+            LoadingG={LoadingG}
 
             />
  :""}
- {/* <OTPVerifyPage /> */}
+ {/* <OTPVerifyPage/> */}
         </div>
         </>
     )
@@ -184,16 +172,9 @@ function S_Btn({Finalize}){
     )
 }
 
-function OTPVerifyPage({Verify_Otp,setOTP,OTP}){
+function OTPVerifyPage({Verify_Otp,setOTP,OTP,LoadingG}){
     function ClearOTP(){
-        // setOTP1("")
-        // setOTP2("")
-        // setOTP3("")
-        // setOTP4("")
-        // setOTP5("")
-        // setOTP6("")
         setOTP("")
-        console.log("hi")
     }
     function Demo(){
         Verify_Otp()
@@ -210,6 +191,7 @@ function OTPVerifyPage({Verify_Otp,setOTP,OTP}){
                 <button className="otp-btns" onClick={ClearOTP}>Clear</button>
                 <button className="otp-btns" onClick={Demo}>Verify</button>
             </div>
+            <div class="-n" style={!LoadingG?{display:"none"}:{}}></div>
 
         </div>
     )
