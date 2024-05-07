@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-    {/* <BrowserRouter>
+    <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home isLogin={isLogin} setisLogin={setisLogin}/>}/>
       <Route exact path='/Login' element={<Login Username={Username} setUsername={setUsername} setisLogin={setisLogin} isLogin={isLogin}/>}/>
@@ -45,8 +45,8 @@ function App() {
       <Route path='/Electricity-and-Power' element={<ElectricityandPower isLogin={isLogin} setisLogin={setisLogin}/>}/>
 
     </Routes>
-    </BrowserRouter> */}
-    <ForgetPassword/>
+    </BrowserRouter>
+    {/* <ForgetPassword/> */}
   
     
     </>

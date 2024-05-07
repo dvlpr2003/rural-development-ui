@@ -16,7 +16,7 @@ export default function ForgetPassword(){
                 </div>
             </form>
 
-            <form className="forget-password-c5-c7-form-1 form-2">
+            {/* <form className="forget-password-c5-c7-form-1 form-2">
                 <p className="forget-password-c5-c7-form-p">Enter OTP</p>
                 <input type="text" />
                 <div className="form-btn-loader">
@@ -24,7 +24,7 @@ export default function ForgetPassword(){
                 <div class="loader"></div>
 
                 </div>
-            </form>
+            </form> */}
 
         </div>
         </div>
