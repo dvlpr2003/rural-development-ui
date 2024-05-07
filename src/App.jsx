@@ -15,6 +15,7 @@ import ElectricityandPower from './Pages/E&P'
 import WaterSupplyandSanitation from './Pages/W&S'
 import AgricultureandDevelopment from './Pages/A&D'
 import EducationandDevelopment from './Pages/E&D'
+import ForgetPassword from './components/UserLoginPassword'
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    {/* <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home isLogin={isLogin} setisLogin={setisLogin}/>}/>
       <Route exact path='/Login' element={<Login Username={Username} setUsername={setUsername} setisLogin={setisLogin} isLogin={isLogin}/>}/>
@@ -44,17 +45,9 @@ function App() {
       <Route path='/Electricity-and-Power' element={<ElectricityandPower isLogin={isLogin} setisLogin={setisLogin}/>}/>
 
     </Routes>
-    </BrowserRouter>
-    {/* <RoadsandTransport/> */}
-    {/* <ElectricityandPower/> */}
-    {/* <WaterSupplyandSanitation/> */}
-    {/* <AgricultureandDevelopment/> */}
-    {/* <EducationandDevelopment/> */}
-    {/* <OfficerLogin/> */}
-    {/* <OfficerPage/> */}
-    {/* <Complaints/> */}
-    {/* <LoadingAnimation/> */}
-    {/* <ComplaintForm/> */}
+    </BrowserRouter> */}
+    <ForgetPassword/>
+  
     
     </>
  
