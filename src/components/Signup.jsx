@@ -101,7 +101,7 @@ export default function SignUp({isLogin}){
                 }
                 </div>
             </div>
-            { isVerify ?
+            {/* { isVerify ?
             <OTPVerifyPage
             setOTP1={setOTP1}
             setOTP2={setOTP2}
@@ -118,7 +118,8 @@ export default function SignUp({isLogin}){
             Verify_Otp={Verify_Otp}
 
             />
- :""}
+ :""} */}
+ <OTPVerifyPage/>
         </div>
         </>
     )

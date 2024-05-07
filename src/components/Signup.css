@@ -78,8 +78,9 @@ h2 {
 }
 #otp-container{
     position:absolute;
-    width: 100%;
-    height: 50vh;
+    width:auto;
+
+    /* height: 50vh; */
     background-color: #b2aeae;
     border-radius: 2rem;
     display: flex;
@@ -87,6 +88,7 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 2rem;
     
 
 
@@ -103,10 +105,6 @@ h2 {
 #otp-input-container{
     display: flex;
     gap: 2rem;
-
-    /* justify-content: center;
-    
-    align-items: center; */
 
 }
 #otp-input-container input{
@@ -227,6 +225,18 @@ h2 {
             padding-left: 4rem;
             padding-right: 4rem;
         }
+        #otp-input-container input{
+            width:2rem;
+            height: 2.5rem;
+        }
+        #otp-container{
+            padding: 0;
+        }
+        .otp-btns {
+            height: 3rem;
+            width: 2rem;
+        }
+
 
     }
     @media (min-width:550px) and (max-width:750px){
