@@ -110,8 +110,8 @@ h2 {
 #otp-input-container input{
     border: 1px solid #7f7e7e;
     border-radius:10px ;
-    height: 4rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 14rem;
     text-align: center;
     font-size: 1rem;
     outline: none;
@@ -226,14 +226,14 @@ h2 {
             padding-right: 4rem;
         }
         #otp-input-container input{
-            width:2rem;
+            width:10rem;
             height: 2rem;
         }
         #otp-input-container{
             gap: 0.5rem;
         }
         #otp-container{
-            padding: 0;
+            padding: 2;
         }
         .otp-btns {
             height: 3rem;

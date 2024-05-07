@@ -24,12 +24,12 @@ export default function SignUp({isLogin}){
     const [isLoading,setisLoading]=useState(false)
     const [isVerify,setisVerify] = useState(false)
     // otp
-    const[OTP1,setOTP1] = useState("")
-    const[OTP2,setOTP2] = useState("")
-    const[OTP3,setOTP3] = useState("")
-    const[OTP4,setOTP4] = useState("")
-    const[OTP5,setOTP5] = useState("")
-    const[OTP6,setOTP6] = useState("")
+    // const[OTP1,setOTP1] = useState("")
+    // const[OTP2,setOTP2] = useState("")
+    // const[OTP3,setOTP3] = useState("")
+    // const[OTP4,setOTP4] = useState("")
+    // const[OTP5,setOTP5] = useState("")
+    // const[OTP6,setOTP6] = useState("")
     const [OTP,setOTP]=useState("") // main otp
     useEffect (function(){
         let all_data ={
@@ -64,7 +64,6 @@ export default function SignUp({isLogin}){
         }
     }
     async function Verify_Otp(){
-        setOTP(OTP1+OTP2+OTP3+OTP4+OTP5+OTP6)
 
         try{
             const response = await axios.get(`https://dvlpr2003.pythonanywhere.com/api/email/${eMail}/otp/${OTP}/`)
@@ -103,23 +102,25 @@ export default function SignUp({isLogin}){
             </div>
             { isVerify ?
             <OTPVerifyPage
-            setOTP1={setOTP1}
-            setOTP2={setOTP2}
-            setOTP3={setOTP3}
-            setOTP4={setOTP4}
-            setOTP5={setOTP5}
-            setOTP6={setOTP6}
-            OTP1={OTP1}
-            OTP2={OTP2}
-            OTP3={OTP3}
-            OTP4={OTP4}
-            OTP5={OTP5}
-            OTP6={OTP6}
+            // setOTP1={setOTP1}
+            // setOTP2={setOTP2}
+            // setOTP3={setOTP3}
+            // setOTP4={setOTP4}
+            // setOTP5={setOTP5}
+            // setOTP6={setOTP6}
+            // OTP1={OTP1}
+            // OTP2={OTP2}
+            // OTP3={OTP3}
+            // OTP4={OTP4}
+            // OTP5={OTP5}
+            // OTP6={OTP6}
+            OTP={OTP}
+            setOTP = {setOTP}
             Verify_Otp={Verify_Otp}
 
             />
  :""}
- {/* <OTPVerifyPage/> */}
+ {/* <OTPVerifyPage /> */}
         </div>
         </>
     )
@@ -183,14 +184,16 @@ function S_Btn({Finalize}){
     )
 }
 
-function OTPVerifyPage({setOTP1,setOTP2,setOTP3,setOTP4,setOTP5,setOTP6,OTP1,OTP2,OTP3,OTP4,OTP5,OTP6,Verify_Otp}){
+function OTPVerifyPage({Verify_Otp,setOTP,OTP}){
     function ClearOTP(){
-        setOTP1("")
-        setOTP2("")
-        setOTP3("")
-        setOTP4("")
-        setOTP5("")
-        setOTP6("")
+        // setOTP1("")
+        // setOTP2("")
+        // setOTP3("")
+        // setOTP4("")
+        // setOTP5("")
+        // setOTP6("")
+        setOTP("")
+        console.log("hi")
     }
     function Demo(){
         Verify_Otp()
@@ -201,12 +204,12 @@ function OTPVerifyPage({setOTP1,setOTP2,setOTP3,setOTP4,setOTP5,setOTP6,OTP1,OTP
             <img src="img/otp.png" id="otp-logo"/>
             </div>
             <div id="otp-input-container">
-                <input type="text" maxLength={"1"} value={OTP1} onChange={e=>setOTP1(e.target.value)}/>
-                <input type="text" maxLength={"1"} value={OTP2} onChange={e=>setOTP2(e.target.value)}/>
+                <input type="text" value={OTP} onChange={e=>setOTP(e.target.value)}/>
+                {/* <input type="text" maxLength={"1"} value={OTP2} onChange={e=>setOTP2(e.target.value)}/>
                 <input type="text" maxLength={"1"} value={OTP3} onChange={e=>setOTP3(e.target.value)}/>
                 <input type="text" maxLength={"1"} value={OTP4} onChange={e=>setOTP4(e.target.value)}/>
                 <input type="text" maxLength={"1"} value={OTP5} onChange={e=>setOTP5(e.target.value)}/>
-                <input type="text" maxLength={"1"} value={OTP6} onChange={e=>setOTP6(e.target.value)}/>
+                <input type="text" maxLength={"1"} value={OTP6} onChange={e=>setOTP6(e.target.value)}/> */}
             </div>
             <div id="otp-button-container">
                 <button className="otp-btns" onClick={ClearOTP}>Clear</button>
