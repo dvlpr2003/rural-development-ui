@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from '/node_modules/axios';
 import "./UserLoginPassword.css"
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom';

@@ -34,7 +34,7 @@ export default function ComplaintForm({isLogin,Username}){
         formData.append('ComplaintDes', ComplaintDes);
 
         try{
-            // setLoadingAN(true)
+            setLoadingAN(true)
             const response = await axios.post(`https://dvlpr2003.pythonanywhere.com/api/complaint/${Username}/`,formData,{
                 headers: {
                   'Content-Type': 'multipart/form-data'
@@ -43,7 +43,7 @@ export default function ComplaintForm({isLogin,Username}){
             if (response.data["hi"] === "success"){
                 navigate("/People")
             }
-            // setLoadingAN(false)
+            setLoadingAN(false)
 
 
          
