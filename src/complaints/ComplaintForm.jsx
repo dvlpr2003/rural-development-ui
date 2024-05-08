@@ -19,6 +19,7 @@ export default function ComplaintForm({isLogin,Username}){
     const [ComplaintDistrict,setComplaintDistrict]=useState("")
     const [ComplaintPincode,setComplaintPincode]=useState()
     const [ComplaintDes,setComplaintDes] = useState("")
+    const [isLoadingAN,setLoadingAN] = useState(false)
     const handleFileChange = (event) => {
         setComplaintImage(event.target.files[0]);
       };
@@ -33,6 +34,7 @@ export default function ComplaintForm({isLogin,Username}){
         formData.append('ComplaintDes', ComplaintDes);
 
         try{
+            // setLoadingAN(true)
             const response = await axios.post(`https://dvlpr2003.pythonanywhere.com/api/complaint/${Username}/`,formData,{
                 headers: {
                   'Content-Type': 'multipart/form-data'
@@ -41,11 +43,13 @@ export default function ComplaintForm({isLogin,Username}){
             if (response.data["hi"] === "success"){
                 navigate("/People")
             }
+            // setLoadingAN(false)
 
 
          
         }catch(error){
             console.log(error)
+            setLoadingAN(false)
         }
     }
     return(
@@ -61,6 +65,8 @@ export default function ComplaintForm({isLogin,Username}){
             setComplaintDes={setComplaintDes}
             handleFileChange={handleFileChange}
             UpdateComplaint={UpdateComplaint}
+            isLoadingAN = {isLoadingAN}
+            setLoadingAN = {setLoadingAN}
             />
           
         </div>
@@ -76,11 +82,17 @@ function FormHeading(){
         </div>
     )
 }
-function FormBody({setComplaintCategory,setComplaintName,setComplaintLocation,setComplaintDistrict,setComplaintPincode,setComplaintDes,handleFileChange,UpdateComplaint }){
+function FormBody({setComplaintCategory,setComplaintName,setComplaintLocation,setComplaintDistrict,setComplaintPincode,setComplaintDes,handleFileChange,UpdateComplaint,isLoadingAN,setLoadingAN}){
 
     return(
 
         <div id="form-body">
+            <div className="-m-r-container" style={!isLoadingAN?{display:"none"}:{}}>
+            <div className="-m-r">
+                
+            </div>
+            <p>please wait . . . </p>
+            </div>
             <div id="category">
                 <span>Select Category</span>
                 <select onChange={(e)=>setComplaintCategory(e.target.value)}>
