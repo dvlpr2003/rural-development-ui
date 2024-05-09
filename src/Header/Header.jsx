@@ -52,7 +52,6 @@ export default function Header({isLogin,setisLogin}){
             </NavLink >
             <div id='Header-Elements'>
                 <NavLink to="/"><span>Home</span></NavLink >
-                <span>About Us</span>
                 <span onClick={lrt} style={{cursor:"pointer"}}>Our services</span>
                 <NavLink to='/officer-login'><span>Officer login</span></NavLink>
             </div>
